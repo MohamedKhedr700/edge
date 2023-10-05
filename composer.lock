@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7bda601bd4b94ea664b11053f081c054",
+    "content-hash": "247c4a6864f6694218c2da3ef8fc9596",
     "packages": [
         {
             "name": "archtechx/enums",
@@ -3156,12 +3156,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MohamedKhedr700/core-action.git",
-                "reference": "5b1ebc8053a6421067c7698d9e10f6a17efa1a3f"
+                "reference": "fd3a5da63de408913b4e665fcf652d66571cc32f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MohamedKhedr700/core-action/zipball/5b1ebc8053a6421067c7698d9e10f6a17efa1a3f",
-                "reference": "5b1ebc8053a6421067c7698d9e10f6a17efa1a3f",
+                "url": "https://api.github.com/repos/MohamedKhedr700/core-action/zipball/fd3a5da63de408913b4e665fcf652d66571cc32f",
+                "reference": "fd3a5da63de408913b4e665fcf652d66571cc32f",
                 "shasum": ""
             },
             "require": {
@@ -3208,7 +3208,7 @@
                 "issues": "https://github.com/MohamedKhedr700/core-action/issues",
                 "source": "https://github.com/MohamedKhedr700/core-action/tree/main"
             },
-            "time": "2023-10-05T23:05:16+00:00"
+            "time": "2023-10-05T23:45:48+00:00"
         },
         {
             "name": "raid/core-command",
@@ -3324,6 +3324,66 @@
             "time": "2023-10-05T22:47:19+00:00"
         },
         {
+            "name": "raid/core-event",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MohamedKhedr700/core-event.git",
+                "reference": "e36ff52f990301090ca6a9c4a8f606688fdb4a52"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MohamedKhedr700/core-event/zipball/e36ff52f990301090ca6a9c4a8f606688fdb4a52",
+                "reference": "e36ff52f990301090ca6a9c4a8f606688fdb4a52",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.2",
+                "raid/core-command": "dev-main",
+                "raid/core-enum": "*"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.10"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Raid\\Core\\Event\\Providers\\EventServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Raid\\Core\\Event\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "mohamed_khedr",
+                    "email": "mohamedkhedr700@gmail.com"
+                }
+            ],
+            "description": "Raid Core Event",
+            "keywords": [
+                "core",
+                "event",
+                "laravel",
+                "listener",
+                "raid"
+            ],
+            "support": {
+                "issues": "https://github.com/MohamedKhedr700/core-event/issues",
+                "source": "https://github.com/MohamedKhedr700/core-event/tree/main"
+            },
+            "time": "2023-10-05T23:36:49+00:00"
+        },
+        {
             "name": "raid/core-gate",
             "version": "dev-main",
             "source": {
@@ -3387,12 +3447,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MohamedKhedr700/core-model.git",
-                "reference": "7047097d39d52dbd5b09b9832fdd6ad1d762e5c1"
+                "reference": "2ee2ed7a56e24d63eacadc791eee62e6ef53d024"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MohamedKhedr700/core-model/zipball/7047097d39d52dbd5b09b9832fdd6ad1d762e5c1",
-                "reference": "7047097d39d52dbd5b09b9832fdd6ad1d762e5c1",
+                "url": "https://api.github.com/repos/MohamedKhedr700/core-model/zipball/2ee2ed7a56e24d63eacadc791eee62e6ef53d024",
+                "reference": "2ee2ed7a56e24d63eacadc791eee62e6ef53d024",
                 "shasum": ""
             },
             "require": {
@@ -3438,7 +3498,7 @@
                 "issues": "https://github.com/MohamedKhedr700/core-model/issues",
                 "source": "https://github.com/MohamedKhedr700/core-model/tree/main"
             },
-            "time": "2023-10-05T19:52:48+00:00"
+            "time": "2023-10-05T23:35:47+00:00"
         },
         {
             "name": "raid/core-request",
@@ -8909,6 +8969,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "raid/core-event": 20,
         "raid/core-model": 20,
         "raid/core-request": 20
     },
