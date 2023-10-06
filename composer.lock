@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "247c4a6864f6694218c2da3ef8fc9596",
+    "content-hash": "e914a7a340adf24dfa6e07c8b1bd769a",
     "packages": [
         {
             "name": "archtechx/enums",
@@ -3211,6 +3211,67 @@
             "time": "2023-10-05T23:45:48+00:00"
         },
         {
+            "name": "raid/core-auth",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MohamedKhedr700/core-auth.git",
+                "reference": "18048775547486a31d63556e796d47961733c12c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MohamedKhedr700/core-auth/zipball/18048775547486a31d63556e796d47961733c12c",
+                "reference": "18048775547486a31d63556e796d47961733c12c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.2",
+                "raid/core-command": "dev-main",
+                "raid/core-enum": "dev-main",
+                "raid/core-model": "dev-main"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.10"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Raid\\Core\\Auth\\Providers\\AuthServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Raid\\Core\\Auth\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "mohamed_khedr",
+                    "email": "mohamedkhedr700@gmail.com"
+                }
+            ],
+            "description": "Raid Core Auth Package",
+            "keywords": [
+                "Authentication",
+                "auth",
+                "core",
+                "laravel",
+                "raid"
+            ],
+            "support": {
+                "issues": "https://github.com/MohamedKhedr700/core-auth/issues",
+                "source": "https://github.com/MohamedKhedr700/core-auth/tree/main"
+            },
+            "time": "2023-10-05T21:49:35+00:00"
+        },
+        {
             "name": "raid/core-command",
             "version": "dev-main",
             "source": {
@@ -3447,12 +3508,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MohamedKhedr700/core-model.git",
-                "reference": "2ee2ed7a56e24d63eacadc791eee62e6ef53d024"
+                "reference": "7b3b3cb4ae6f2e4b92dbd7d73a71728e81ab15ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MohamedKhedr700/core-model/zipball/2ee2ed7a56e24d63eacadc791eee62e6ef53d024",
-                "reference": "2ee2ed7a56e24d63eacadc791eee62e6ef53d024",
+                "url": "https://api.github.com/repos/MohamedKhedr700/core-model/zipball/7b3b3cb4ae6f2e4b92dbd7d73a71728e81ab15ce",
+                "reference": "7b3b3cb4ae6f2e4b92dbd7d73a71728e81ab15ce",
                 "shasum": ""
             },
             "require": {
@@ -3498,7 +3559,7 @@
                 "issues": "https://github.com/MohamedKhedr700/core-model/issues",
                 "source": "https://github.com/MohamedKhedr700/core-model/tree/main"
             },
-            "time": "2023-10-05T23:35:47+00:00"
+            "time": "2023-10-05T23:50:59+00:00"
         },
         {
             "name": "raid/core-request",
@@ -8969,6 +9030,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "raid/core-action": 20,
         "raid/core-event": 20,
         "raid/core-model": 20,
         "raid/core-request": 20

@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,4 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('posts', \App\Http\Controllers\CreatePostController::class);
+Route::post('posts', \App\Http\Controllers\CreatePostController::class)->middleware('auth:user');
+
+Route::get('token', function () {
+    $user = User::create([
+        'name' => 'raid',
+        'email' => 'core@raid.com',
+        'password' => '123123123',
+    ]);
+
+    $token = $user->createToken($user->name);
+
+    return ['token' => $token->plainTextToken];
+});
+

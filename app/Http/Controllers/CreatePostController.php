@@ -13,6 +13,8 @@ class CreatePostController
      */
     public function __invoke(CreatePostRequest $request, CreatePostAction $createPostAction): JsonResponse
     {
+        $createPostAction->authorize();
+
         $createPostAction->execute($request->validated());
 
         return response()->json([
