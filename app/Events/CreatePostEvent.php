@@ -21,6 +21,6 @@ class CreatePostEvent extends Event implements EventInterface
     public const LISTENERS = [
         SendPostEmail::class,
         SendPostNotification::class,
-        UpdatePostAuthor::class
+        UpdatePostAuthor::class,
     ];
 }

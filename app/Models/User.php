@@ -6,7 +6,6 @@ use Raid\Core\Auth\Models\Authentication\Account;
 
 class User extends Account
 {
-
     /**
      * The attributes that are mass assignable.
      */
