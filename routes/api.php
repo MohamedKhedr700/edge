@@ -14,12 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('posts', \App\Http\Controllers\CreatePostController::class)->middleware('auth:user');
+Route::post('users', \App\Http\Controllers\CreateUserController::class)->middleware('auth:user');
 
 Route::get('token', function () {
     $user = User::create([
-        'name' => 'raid',
+        'phone' => '501010101',
         'email' => 'core@raid.com',
+        'user_name' => 'raid',
         'password' => '123123123',
     ]);
 

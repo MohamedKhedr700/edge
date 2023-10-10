@@ -2,10 +2,23 @@
 
 namespace App\Models;
 
+use App\Events\CreateUserEvent;
+use App\Http\Gates\UserGate;
+use App\Models\ModelFilters\UserFilter;
 use Raid\Core\Auth\Models\Authentication\Account;
+use Raid\Core\Event\Traits\Event\Eventable;
+use Raid\Core\Gate\Traits\Gate\Gateable;
 
 class User extends Account
 {
+    use Eventable;
+    use Gateable;
+
+    /**
+     * {@inheritdoc}
+     */
+    protected string $filter = UserFilter::class;
+
     /**
      * The attributes that are mass assignable.
      */
@@ -30,4 +43,20 @@ class User extends Account
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    /**
+     * Get eventable events.
+     */
+    public static function getEvents(): array
+    {
+        return [];
+    }
+
+    /**
+     * Get gateable gates.
+     */
+    public static function getGates(): array
+    {
+        return [];
+    }
 }

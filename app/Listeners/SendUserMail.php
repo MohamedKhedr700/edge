@@ -4,7 +4,7 @@ namespace App\Listeners;
 
 use Raid\Core\Event\Events\Contracts\EventListenerInterface;
 
-class UpdatePostAuthor implements EventListenerInterface
+class SendUserMail implements EventListenerInterface
 {
     /**
      * Initialize the listener.
@@ -18,6 +18,6 @@ class UpdatePostAuthor implements EventListenerInterface
      */
     public function handle(): void
     {
-        dump('UpdatePostAuthor');
+        dump('SendPostEmail');
     }
 }

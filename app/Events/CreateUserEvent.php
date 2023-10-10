@@ -2,13 +2,11 @@
 
 namespace App\Events;
 
-use App\Listeners\SendPostEmail;
-use App\Listeners\SendPostNotification;
-use App\Listeners\UpdatePostAuthor;
+use App\Listeners\SendUserMail;
 use Raid\Core\Event\Events\Contracts\EventInterface;
 use Raid\Core\Event\Events\Event;
 
-class CreatePostEvent extends Event implements EventInterface
+class CreateUserEvent extends Event implements EventInterface
 {
     /**
      * {@inheritdoc}
@@ -19,8 +17,6 @@ class CreatePostEvent extends Event implements EventInterface
      * {@inheritdoc}
      */
     public const LISTENERS = [
-        SendPostEmail::class,
-        SendPostNotification::class,
-        UpdatePostAuthor::class,
+        SendUserMail::class,
     ];
 }

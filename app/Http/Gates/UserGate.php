@@ -5,7 +5,7 @@ namespace App\Http\Gates;
 use Raid\Core\Gate\Gates\Contracts\GateInterface;
 use Raid\Core\Gate\Gates\Gate;
 
-class PostGate extends Gate implements GateInterface
+class UserGate extends Gate implements GateInterface
 {
     /**
      * {@inheritdoc}

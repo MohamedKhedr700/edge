@@ -3,18 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Actions\CreatePostAction;
-use App\Http\Requests\CreatePostRequest;
+use App\Http\Requests\CreateUserRequest;
+use App\Models\Post;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Http\JsonResponse;
 
-class CreatePostController
+class CreateUserController
 {
     /**
      * Invoke the controller method.
      *
      * @throws AuthorizationException
      */
-    public function __invoke(CreatePostRequest $request, CreatePostAction $createPostAction): JsonResponse
+    public function __invoke(CreateUserRequest $request, CreatePostAction $createPostAction): JsonResponse
     {
         $createPostAction->authorize();
 
