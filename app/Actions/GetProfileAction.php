@@ -5,6 +5,7 @@ namespace App\Actions;
 use App\Models\User;
 use Raid\Core\Action\Actions\Action;
 use Raid\Core\Action\Actions\Contracts\ActionInterface;
+use Raid\Core\Auth\Models\Authentication\Contracts\AccountInterface;
 
 class GetProfileAction extends Action implements ActionInterface
 {
@@ -21,7 +22,8 @@ class GetProfileAction extends Action implements ActionInterface
     /**
      * Handle the action.
      */
-    public function handle()
+    public function handle(): AccountInterface
     {
+        return account();
     }
 }

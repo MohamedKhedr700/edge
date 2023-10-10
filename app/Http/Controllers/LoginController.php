@@ -18,10 +18,11 @@ class LoginController
     {
         $loginAction->authorize();
 
-        $loginAction->execute($request->validated());
+        $authChannel = $loginAction->execute($request->validated());
 
         return response()->json([
             'message' => 'logged in successfully.',
+            'token' => $authChannel->stringToken(),
         ]);
     }
 }

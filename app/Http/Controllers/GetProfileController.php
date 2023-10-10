@@ -17,10 +17,11 @@ class GetProfileController
     {
         $getProfileAction->authorize();
 
-        $getProfileAction->execute();
+        $account = $getProfileAction->execute();
 
         return response()->json([
             'message' => 'profile fetched successfully.',
+            'profile' => $account->toArray(),
         ]);
     }
 }

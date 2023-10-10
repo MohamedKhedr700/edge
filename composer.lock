@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e914a7a340adf24dfa6e07c8b1bd769a",
+    "content-hash": "a2a95240c563b8f27c51d407228549c2",
     "packages": [
         {
             "name": "archtechx/enums",
@@ -9030,6 +9030,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "raid/core-action": 20,
         "raid/core-auth": 20,
         "raid/core-event": 20,
         "raid/core-model": 20,

@@ -2,6 +2,9 @@
 
 namespace App\Models;
 
+use App\Events\LoginEvent;
+use App\Events\RegisterEvent;
+use App\Http\Gates\Gate;
 use App\Models\ModelFilters\UserFilter;
 use Raid\Core\Auth\Authentication\Contracts\AuthenticatableInterface;
 use Raid\Core\Auth\Models\Authentication\Account;
@@ -15,6 +18,11 @@ class User extends Account implements AccountInterface, AuthenticatableInterface
     use Authenticatable;
     use Eventable;
     use Gateable;
+
+    /**
+     * {@inheritdoc}
+     */
+    public const ACCOUNT_TYPE = 'user';
 
     /**
      * {@inheritdoc}
@@ -51,7 +59,10 @@ class User extends Account implements AccountInterface, AuthenticatableInterface
      */
     public static function getEvents(): array
     {
-        return [];
+        return [
+            RegisterEvent::class,
+            LoginEvent::class,
+        ];
     }
 
     /**
@@ -59,6 +70,8 @@ class User extends Account implements AccountInterface, AuthenticatableInterface
      */
     public static function getGates(): array
     {
-        return [];
+        return [
+            Gate::class,
+        ];
     }
 }

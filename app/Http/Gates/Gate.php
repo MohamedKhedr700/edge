@@ -11,7 +11,7 @@ class Gate extends RaidGate implements GateInterface
      * {@inheritdoc}
      */
     public const ACTIONS = [
-        'register', 'login', 'getProfile',
+        'register', 'login', 'get_profile',
     ];
 
     /**
@@ -35,8 +35,6 @@ class Gate extends RaidGate implements GateInterface
      */
     public function getProfile(): bool
     {
-        dd('ss');
-
         return true;
     }
 }
