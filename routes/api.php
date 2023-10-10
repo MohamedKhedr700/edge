@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\CreateController;
 use App\Http\Controllers\GetProfileController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -17,18 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// register
+Route::post('register', RegisterController::class);
 // login
 Route::post('login', LoginController::class);
-
-Route::group([
-    'middleware' => ['auth:user'],
-], function () {
-    // create
-    Route::post('create', CreateController::class);
-    // get profile
-    Route::get('profile', GetProfileController::class);
-});
-
+// get profile
+Route::get('profile', GetProfileController::class)->middleware(['auth:user']);
 
 // create token
 Route::get('token', function () {

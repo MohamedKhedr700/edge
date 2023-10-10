@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use App\Events\CreateUserEvent;
-use App\Http\Gates\UserGate;
 use App\Models\ModelFilters\UserFilter;
 use Raid\Core\Auth\Authentication\Contracts\AuthenticatableInterface;
 use Raid\Core\Auth\Models\Authentication\Account;

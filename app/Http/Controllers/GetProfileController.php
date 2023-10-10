@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Actions\CreateAction;
-use App\Http\Requests\CreateRequest;
-use App\Models\Post;
+use App\Actions\GetProfileAction;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Http\JsonResponse;
 
@@ -15,14 +13,14 @@ class GetProfileController
      *
      * @throws AuthorizationException
      */
-    public function __invoke(CreateRequest $request, CreateAction $createPostAction): JsonResponse
+    public function __invoke(GetProfileAction $getProfileAction): JsonResponse
     {
-        $createPostAction->authorize();
+        $getProfileAction->authorize();
 
-        $createPostAction->execute($request->validated());
+        $getProfileAction->execute();
 
         return response()->json([
-            'message' => 'Post created successfully',
+            'message' => 'profile fetched successfully.',
         ]);
     }
 }

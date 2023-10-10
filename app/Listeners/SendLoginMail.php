@@ -4,12 +4,12 @@ namespace App\Listeners;
 
 use Raid\Core\Event\Events\Contracts\EventListenerInterface;
 
-class SendUserMail implements EventListenerInterface
+class SendLoginMail implements EventListenerInterface
 {
     /**
      * Initialize the listener.
      */
-    public function init(): void
+    public function init(array $credentials): void
     {
     }
 
@@ -18,6 +18,6 @@ class SendUserMail implements EventListenerInterface
      */
     public function handle(): void
     {
-        dump('SendPostEmail');
+        dump('send login mail');
     }
 }

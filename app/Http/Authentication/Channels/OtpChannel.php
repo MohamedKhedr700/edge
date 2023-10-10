@@ -5,8 +5,8 @@ namespace App\Http\Authentication\Channels;
 use App\Http\Authentication\Rules\VerifiedPhoneRule;
 use App\Http\Authentication\Steps\SendOtpStep;
 use App\Http\Authentication\Workers\PhoneWorker;
-use Raid\Core\Auth\Authentication\Contracts\AuthChannelInterface;
 use Raid\Core\Auth\Authentication\AuthChannel;
+use Raid\Core\Auth\Authentication\Contracts\AuthChannelInterface;
 
 class OtpChannel extends AuthChannel implements AuthChannelInterface
 {

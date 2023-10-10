@@ -3,16 +3,15 @@
 namespace App\Actions;
 
 use App\Models\User;
-use Exception;
 use Raid\Core\Action\Actions\Action;
 use Raid\Core\Action\Actions\Contracts\ActionInterface;
 
-class CreateAction extends Action implements ActionInterface
+class LoginAction extends Action implements ActionInterface
 {
     /**
      * {@inheritdoc}
      */
-    public const ACTION = 'create';
+    public const ACTION = 'login';
 
     /**
      * {@inheritDoc}
@@ -21,11 +20,8 @@ class CreateAction extends Action implements ActionInterface
 
     /**
      * Handle the action.
-     *
-     * @throws Exception
      */
-    public function handle(array $data = []): User
+    public function handle(array $credentials)
     {
-        return $this->actionable()->create($data);
     }
 }

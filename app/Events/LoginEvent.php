@@ -2,21 +2,21 @@
 
 namespace App\Events;
 
-use App\Listeners\SendUserMail;
+use App\Listeners\SendLoginMail;
 use Raid\Core\Event\Events\Contracts\EventInterface;
 use Raid\Core\Event\Events\Event;
 
-class CreateUserEvent extends Event implements EventInterface
+class LoginEvent extends Event implements EventInterface
 {
     /**
      * {@inheritdoc}
      */
-    public const ACTION = 'create';
+    public const ACTION = 'login';
 
     /**
      * {@inheritdoc}
      */
     public const LISTENERS = [
-        SendUserMail::class,
+        SendLoginMail::class,
     ];
 }

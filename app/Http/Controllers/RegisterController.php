@@ -2,26 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use App\Actions\LoginAction;
+use App\Actions\RegisterAction;
 use App\Http\Requests\CreateRequest;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Http\JsonResponse;
 
-class LoginController
+class RegisterController
 {
     /**
      * Invoke the controller method.
      *
      * @throws AuthorizationException
      */
-    public function __invoke(CreateRequest $request, LoginAction $loginAction): JsonResponse
+    public function __invoke(CreateRequest $request, RegisterAction $registerAction): JsonResponse
     {
-        $loginAction->authorize();
+        $registerAction->authorize();
 
-        $loginAction->execute($request->validated());
+        $registerAction->execute($request->validated());
 
         return response()->json([
-            'message' => 'logged in successfully.',
+            'message' => 'registered successfully.',
         ]);
     }
 }
