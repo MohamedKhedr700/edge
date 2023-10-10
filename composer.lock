@@ -3450,12 +3450,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MohamedKhedr700/core-gate.git",
-                "reference": "dbf8391f08837bfd383f057ece40a5b7714e3963"
+                "reference": "579bba5ec8de74882df557e6e8d585233efa610f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MohamedKhedr700/core-gate/zipball/dbf8391f08837bfd383f057ece40a5b7714e3963",
-                "reference": "dbf8391f08837bfd383f057ece40a5b7714e3963",
+                "url": "https://api.github.com/repos/MohamedKhedr700/core-gate/zipball/579bba5ec8de74882df557e6e8d585233efa610f",
+                "reference": "579bba5ec8de74882df557e6e8d585233efa610f",
                 "shasum": ""
             },
             "require": {
@@ -3500,7 +3500,7 @@
                 "issues": "https://github.com/MohamedKhedr700/core-gate/issues",
                 "source": "https://github.com/MohamedKhedr700/core-gate/tree/main"
             },
-            "time": "2023-10-05T23:06:55+00:00"
+            "time": "2023-10-10T20:32:22+00:00"
         },
         {
             "name": "raid/core-model",
