@@ -16,6 +16,8 @@ class LoginController
      */
     public function __invoke(CreateRequest $request, LoginAction $loginAction): JsonResponse
     {
+        $loginAction->authorize();
+
         $authChannel = $loginAction->execute($request->validated());
 
         return response()->json([
