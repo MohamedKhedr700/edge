@@ -21,7 +21,7 @@ class GetProfileController
 
         return response()->json([
             'message' => 'profile fetched successfully.',
-            'profile' => $account->toArray(),
+            'resource' => $account->toArray(),
         ]);
     }
 }

@@ -16,13 +16,12 @@ class LoginController
      */
     public function __invoke(CreateRequest $request, LoginAction $loginAction): JsonResponse
     {
-        $loginAction->authorize();
-
         $authChannel = $loginAction->execute($request->validated());
 
         return response()->json([
             'message' => 'logged in successfully.',
             'token' => $authChannel->stringToken(),
+            'resource' => $authChannel->account()->toArray(),
         ]);
     }
 }
