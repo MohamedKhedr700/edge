@@ -2,10 +2,14 @@
 
 namespace App\Models;
 
+use App\Actions\GetProfileAction;
+use App\Actions\LoginAction;
+use App\Actions\RegisterAction;
 use App\Events\LoginEvent;
 use App\Events\RegisterEvent;
 use App\Http\Gates\Gate;
 use App\Models\ModelFilters\UserFilter;
+use Raid\Core\Action\Traits\Action\Actionable;
 use Raid\Core\Auth\Authentication\Contracts\AuthenticatableInterface;
 use Raid\Core\Auth\Models\Authentication\Account;
 use Raid\Core\Auth\Models\Authentication\Contracts\AccountInterface;
@@ -15,6 +19,7 @@ use Raid\Core\Gate\Traits\Gate\Gateable;
 
 class User extends Account implements AccountInterface, AuthenticatableInterface
 {
+    use Actionable;
     use Authenticatable;
     use Eventable;
     use Gateable;
@@ -55,13 +60,25 @@ class User extends Account implements AccountInterface, AuthenticatableInterface
     ];
 
     /**
+     * Get actions.
+     */
+    public static function getActions(): array
+    {
+        return [
+            GetProfileAction::class,
+            LoginAction::class,
+            RegisterAction::class,
+        ];
+    }
+
+    /**
      * Get eventable events.
      */
     public static function getEvents(): array
     {
         return [
-            RegisterEvent::class,
             LoginEvent::class,
+            RegisterEvent::class,
         ];
     }
 
