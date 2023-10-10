@@ -2,15 +2,18 @@
 
 namespace App\Http\Requests;
 
+use App\Traits\Request\WithCommonRules;
 use Raid\Core\Request\Requests\FormRequest;
 
-class CreateUserRequest extends FormRequest
+class CreateRequest extends FormRequest
 {
+    use WithCommonRules;
+
     /**
      * Get the validation rules that apply to the request.
      */
     public function rules(): array
     {
-        return [];
+        return $this->withCommonRules();
     }
 }

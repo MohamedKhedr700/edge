@@ -9030,7 +9030,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "raid/core-action": 20,
+        "raid/core-auth": 20,
         "raid/core-event": 20,
         "raid/core-model": 20,
         "raid/core-request": 20

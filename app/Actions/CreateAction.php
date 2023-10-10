@@ -2,12 +2,12 @@
 
 namespace App\Actions;
 
-use App\Models\Post;
+use App\Models\User;
 use Exception;
 use Raid\Core\Action\Actions\Action;
 use Raid\Core\Action\Actions\Contracts\ActionInterface;
 
-class CreatePostAction extends Action implements ActionInterface
+class CreateAction extends Action implements ActionInterface
 {
     /**
      * {@inheritdoc}
@@ -17,14 +17,14 @@ class CreatePostAction extends Action implements ActionInterface
     /**
      * {@inheritDoc}
      */
-    public const ACTIONABLE = Post::class;
+    public const ACTIONABLE = User::class;
 
     /**
      * Handle the action.
      *
      * @throws Exception
      */
-    public function handle(array $data = []): Post
+    public function handle(array $data = []): User
     {
         return $this->actionable()->create($data);
     }

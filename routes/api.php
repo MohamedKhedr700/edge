@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\CreateController;
+use App\Http\Controllers\GetProfileController;
+use App\Http\Controllers\LoginController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -14,8 +17,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('users', \App\Http\Controllers\CreateUserController::class)->middleware('auth:user');
+// login
+Route::post('login', LoginController::class);
 
+Route::group([
+    'middleware' => ['auth:user'],
+], function () {
+    // create
+    Route::post('create', CreateController::class);
+    // get profile
+    Route::get('profile', GetProfileController::class);
+});
+
+
+// create token
 Route::get('token', function () {
     $user = User::create([
         'phone' => '501010101',

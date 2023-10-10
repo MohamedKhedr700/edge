@@ -2,14 +2,17 @@
 
 namespace App\Traits\Request;
 
-trait WithPostCommonRules
+trait WithCommonRules
 {
     /**
      * Get the common rules for the request.
      */
     public function commonRules(): array
     {
-        return [];
+        return [
+            'phone' => ['required', 'string'],
+            'password' => ['required', 'string'],
+        ];
     }
 
     /**
@@ -17,6 +20,9 @@ trait WithPostCommonRules
      */
     public function attributes(): array
     {
-        return [];
+        return [
+            'phone' => __('phone number'),
+            'password' => __('password'),
+        ];
     }
 }

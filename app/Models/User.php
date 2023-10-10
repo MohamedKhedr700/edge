@@ -5,12 +5,16 @@ namespace App\Models;
 use App\Events\CreateUserEvent;
 use App\Http\Gates\UserGate;
 use App\Models\ModelFilters\UserFilter;
+use Raid\Core\Auth\Authentication\Contracts\AuthenticatableInterface;
 use Raid\Core\Auth\Models\Authentication\Account;
+use Raid\Core\Auth\Models\Authentication\Contracts\AccountInterface;
+use Raid\Core\Auth\Traits\Model\Authenticatable;
 use Raid\Core\Event\Traits\Event\Eventable;
 use Raid\Core\Gate\Traits\Gate\Gateable;
 
-class User extends Account
+class User extends Account implements AccountInterface, AuthenticatableInterface
 {
+    use Authenticatable;
     use Eventable;
     use Gateable;
 
