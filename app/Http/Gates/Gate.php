@@ -15,7 +15,7 @@ class Gate extends RaidGate implements GateInterface
     ];
 
     /**
-     * Determine if can get profile.
+     * Determine if user can get profile.
      */
     public function getProfile(): bool
     {
