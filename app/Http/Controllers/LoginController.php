@@ -22,7 +22,7 @@ class LoginController extends Controller
         $authChannel = $loginAction->execute($request->validated());
 
         return response()->json([
-            'message' => 'logged in successfully.',
+            'message' => __('logged in successfully.'),
             'token' => $authChannel->stringToken(),
             'resource' => $authChannel->account()->toArray(),
         ]);

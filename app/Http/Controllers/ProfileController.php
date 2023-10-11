@@ -20,7 +20,7 @@ class ProfileController extends Controller
         $account = $getProfileAction->execute();
 
         return response()->json([
-            'message' => 'profile fetched successfully.',
+            'message' => __( 'profile fetched successfully.'),
             'resource' => $account->toArray(),
         ]);
     }

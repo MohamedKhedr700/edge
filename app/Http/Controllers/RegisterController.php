@@ -21,7 +21,7 @@ class RegisterController extends Controller
         $account = $registerAction->execute($request->validated());
 
         return response()->json([
-            'message' => 'registered successfully.',
+            'message' => __('registered successfully.'),
             'resource' => $account->toArray(),
         ]);
     }
