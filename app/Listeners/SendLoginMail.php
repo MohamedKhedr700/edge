@@ -8,7 +8,7 @@ use Raid\Core\Event\Traits\Event\Queueable;
 
 class SendLoginMail implements EventListenerInterface
 {
-    use Lazily;
+//    use Lazily;
 //    use Queueable;
 
     /**
@@ -16,7 +16,6 @@ class SendLoginMail implements EventListenerInterface
      */
     public function init(array $credentials): void
     {
-        dd($credentials);
     }
 
     /**

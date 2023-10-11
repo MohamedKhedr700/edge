@@ -8,7 +8,7 @@ use Raid\Core\Event\Traits\Event\Queueable;
 
 class SendRegisterMail implements EventListenerInterface
 {
-    use Lazily;
+//    use Lazily;
 //    use Queueable;
 
     /**
