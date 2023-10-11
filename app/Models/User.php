@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use App\Actions\GetProfileAction;
 use App\Actions\LoginAction;
+use App\Actions\ProfileAction;
 use App\Actions\RegisterAction;
 use App\Events\LoginEvent;
 use App\Events\RegisterEvent;
@@ -65,7 +65,7 @@ class User extends Account implements AccountInterface, AuthenticatableInterface
     public static function getActions(): array
     {
         return [
-            GetProfileAction::class,
+            ProfileAction::class,
             LoginAction::class,
             RegisterAction::class,
         ];

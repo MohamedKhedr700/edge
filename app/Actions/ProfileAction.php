@@ -7,12 +7,12 @@ use Raid\Core\Action\Actions\Action;
 use Raid\Core\Action\Actions\Contracts\ActionInterface;
 use Raid\Core\Auth\Models\Authentication\Contracts\AccountInterface;
 
-class GetProfileAction extends Action implements ActionInterface
+class ProfileAction extends Action implements ActionInterface
 {
     /**
      * {@inheritdoc}
      */
-    public const ACTION = 'get_profile';
+    public const ACTION = 'profile';
 
     /**
      * {@inheritDoc}

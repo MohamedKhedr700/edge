@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Actions\RegisterAction;
-use App\Http\Requests\CreateRequest;
+use App\Http\Requests\RegisterRequest;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Http\JsonResponse;
 
@@ -14,7 +14,7 @@ class RegisterController extends Controller
      *
      * @throws AuthorizationException
      */
-    public function __invoke(CreateRequest $request, RegisterAction $registerAction): JsonResponse
+    public function __invoke(RegisterRequest $request, RegisterAction $registerAction): JsonResponse
     {
         $registerAction->authorize();
 

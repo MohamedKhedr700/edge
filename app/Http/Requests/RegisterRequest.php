@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use App\Traits\Request\WithCommonRules;
 use Raid\Core\Request\Requests\FormRequest;
 
-class CreateRequest extends FormRequest
+class RegisterRequest extends FormRequest
 {
     use WithCommonRules;
 

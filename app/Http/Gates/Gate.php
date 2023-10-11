@@ -11,13 +11,13 @@ class Gate extends RaidGate implements GateInterface
      * {@inheritdoc}
      */
     public const ACTIONS = [
-        'get_profile',
+        'profile',
     ];
 
     /**
      * Determine if user can get profile.
      */
-    public function getProfile(): bool
+    public function profile(): bool
     {
         return true;
     }
