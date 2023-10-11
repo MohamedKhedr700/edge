@@ -18,6 +18,6 @@ class SendRegisterMail implements EventListenerInterface
      */
     public function handle(): void
     {
-        dump('send register mail');
+//        dump('send register mail');
     }
 }

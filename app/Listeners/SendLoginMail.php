@@ -18,6 +18,6 @@ class SendLoginMail implements EventListenerInterface
      */
     public function handle(): void
     {
-        dump('send login mail');
+//        dump('send login mail');
     }
 }

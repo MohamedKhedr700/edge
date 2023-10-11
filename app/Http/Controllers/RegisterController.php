@@ -7,7 +7,7 @@ use App\Http\Requests\CreateRequest;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Http\JsonResponse;
 
-class RegisterController
+class RegisterController extends Controller
 {
     /**
      * Invoke the controller method.
@@ -18,10 +18,11 @@ class RegisterController
     {
         $registerAction->authorize();
 
-        $registerAction->execute($request->validated());
+        $account = $registerAction->execute($request->validated());
 
         return response()->json([
             'message' => 'registered successfully.',
+            'resource' => $account->toArray(),
         ]);
     }
 }

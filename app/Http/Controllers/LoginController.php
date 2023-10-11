@@ -7,7 +7,7 @@ use App\Http\Requests\CreateRequest;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Http\JsonResponse;
 
-class LoginController
+class LoginController extends Controller
 {
     /**
      * Invoke the controller method.

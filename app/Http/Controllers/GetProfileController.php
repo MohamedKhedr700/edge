@@ -6,7 +6,7 @@ use App\Actions\GetProfileAction;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Http\JsonResponse;
 
-class GetProfileController
+class GetProfileController extends Controller
 {
     /**
      * Invoke the controller method.
