@@ -14,6 +14,8 @@ class RegisterRequest extends FormRequest
      */
     public function rules(): array
     {
-        return $this->withCommonRules();
+        return $this->withCommonRules([
+            'phone' => ['unique:users,phone'],
+        ]);
     }
 }
