@@ -17,7 +17,7 @@
         "raid/core-event": "dev-main",
         "raid/core-gate": "dev-main",
         "raid/core-model": "dev-main",
-        "raid/core-modules": "*",
+        "raid/core-modules": "dev-main",
         "raid/core-repository": "dev-main",
         "raid/core-request": "dev-main"
     },

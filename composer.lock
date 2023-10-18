@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "020882c98df143cd8b0533fc202d4e94",
+    "content-hash": "e502eea673bfee640ad29d67fd56bd5d",
     "packages": [
         {
             "name": "archtechx/enums",
@@ -3956,16 +3956,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MohamedKhedr700/core-modules.git",
-                "reference": "555065741891a64bc55907053fd22455c68f873e"
+                "reference": "42f655f12dd62067d4a368a981540a6c684517ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MohamedKhedr700/core-modules/zipball/555065741891a64bc55907053fd22455c68f873e",
-                "reference": "555065741891a64bc55907053fd22455c68f873e",
+                "url": "https://api.github.com/repos/MohamedKhedr700/core-modules/zipball/42f655f12dd62067d4a368a981540a6c684517ed",
+                "reference": "42f655f12dd62067d4a368a981540a6c684517ed",
                 "shasum": ""
             },
             "require": {
                 "nwidart/laravel-modules": "^10.0@dev",
+                "php": "^8.2",
                 "raid/core-command": "dev-main"
             },
             "default-branch": true,
@@ -3997,7 +3998,7 @@
                 "issues": "https://github.com/MohamedKhedr700/core-modules/issues",
                 "source": "https://github.com/MohamedKhedr700/core-modules/tree/main"
             },
-            "time": "2023-10-18T22:39:58+00:00"
+            "time": "2023-10-18T23:25:49+00:00"
         },
         {
             "name": "raid/core-repository",
@@ -9666,6 +9667,7 @@
     "stability-flags": {
         "raid/core-action": 20,
         "raid/core-auth": 20,
+        "raid/core-controller": 20,
         "raid/core-event": 20,
         "raid/core-gate": 20,
         "raid/core-model": 20,
