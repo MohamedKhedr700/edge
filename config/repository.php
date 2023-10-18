@@ -24,7 +24,5 @@ return [
     |
     */
 
-    'repositories' => [
-        \App\Repositories\UserRepository::class,
-    ],
+    'repositories' => [],
 ];

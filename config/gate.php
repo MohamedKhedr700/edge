@@ -33,9 +33,7 @@ return [
     |
     */
 
-    'gateables' => [
-        \App\Repositories\UserRepository::class,
-    ],
+    'gateables' => [],
 
     /*
     |--------------------------------------------------------------------------
