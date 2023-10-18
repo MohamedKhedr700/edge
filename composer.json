@@ -16,6 +16,8 @@
         "raid/core-event": "dev-main",
         "raid/core-gate": "dev-main",
         "raid/core-model": "dev-main",
+        "raid/core-modules": "dev-main",
+        "raid/core-repository": "dev-main",
         "raid/core-request": "dev-main"
     },
     "require-dev": {
@@ -30,6 +32,7 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
+            "Modules\\": "app/Modules/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         }

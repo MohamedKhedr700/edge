@@ -3,6 +3,7 @@
 namespace App\Actions;
 
 use App\Models\User;
+use App\Repositories\UserRepository;
 use Exception;
 use Raid\Core\Action\Actions\Action;
 use Raid\Core\Action\Actions\Contracts\ActionInterface;
@@ -17,7 +18,7 @@ class RegisterAction extends Action implements ActionInterface
     /**
      * {@inheritDoc}
      */
-    public const ACTIONABLE = User::class;
+    public const ACTIONABLE = UserRepository::class;
 
     /**
      * Handle the action.
@@ -26,6 +27,7 @@ class RegisterAction extends Action implements ActionInterface
      */
     public function handle(array $data = []): User
     {
+        dd($this->actionable()::action('login', []));
         return $this->actionable()->create($data);
     }
 }
