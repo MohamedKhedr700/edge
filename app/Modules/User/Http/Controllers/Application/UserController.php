@@ -2,10 +2,10 @@
 
 namespace Modules\User\Http\Controllers\Application;
 
-use Modules\Core\Http\Controllers\ApiController;
 use Modules\User\Repositories\UserRepository;
+use Raid\Core\Controller\Controllers\Controller;
 
-class UserController extends ApiController
+class UserController extends Controller
 {
     /**
      * {@inheritdoc}

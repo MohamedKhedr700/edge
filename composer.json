@@ -13,6 +13,7 @@
         "mongodb/laravel-mongodb": "^4.0",
         "raid/core-action": "dev-main",
         "raid/core-auth": "dev-main",
+        "raid/core-controller": "dev-main",
         "raid/core-event": "dev-main",
         "raid/core-gate": "dev-main",
         "raid/core-model": "dev-main",

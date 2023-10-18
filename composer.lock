@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c155d88d70a0dd1f7b2639576bc2521a",
+    "content-hash": "020882c98df143cd8b0533fc202d4e94",
     "packages": [
         {
             "name": "archtechx/enums",
@@ -3663,6 +3663,59 @@
                 "source": "https://github.com/MohamedKhedr700/core-command/tree/main"
             },
             "time": "2023-10-05T19:54:54+00:00"
+        },
+        {
+            "name": "raid/core-controller",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MohamedKhedr700/core-controller.git",
+                "reference": "feb029d16340457f695045b0c0b91f75b99bca97"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MohamedKhedr700/core-controller/zipball/feb029d16340457f695045b0c0b91f75b99bca97",
+                "reference": "feb029d16340457f695045b0c0b91f75b99bca97",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.2",
+                "raid/core-action": "dev-main",
+                "raid/core-command": "dev-main",
+                "raid/core-model": "dev-main",
+                "raid/core-repository": "dev-main",
+                "raid/core-request": "dev-main"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Raid\\Core\\Controller\\Providers\\ControllerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Raid\\Core\\Controller\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "mohamedkhedr700",
+                    "email": "mohamedkhedr700@gmail.com"
+                }
+            ],
+            "description": "Raid Core Controller",
+            "support": {
+                "issues": "https://github.com/MohamedKhedr700/core-controller/issues",
+                "source": "https://github.com/MohamedKhedr700/core-controller/tree/main"
+            },
+            "time": "2023-10-18T23:23:01+00:00"
         },
         {
             "name": "raid/core-enum",
