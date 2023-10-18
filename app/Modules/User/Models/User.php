@@ -18,4 +18,11 @@ class User extends Model
     protected $fillable = [
         //
     ];
+
+    /**
+     * {@inheritdoc}
+     */
+    protected $casts = [
+        'created_at' => 'datetime',
+    ];
 }
