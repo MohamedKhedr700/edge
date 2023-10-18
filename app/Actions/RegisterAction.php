@@ -27,7 +27,6 @@ class RegisterAction extends Action implements ActionInterface
      */
     public function handle(array $data = []): User
     {
-        dd($this->actionable()::action('login', []));
         return $this->actionable()->create($data);
     }
 }

@@ -8,8 +8,8 @@ use Raid\Core\Event\Traits\Event\Queueable;
 
 class SendLoginMail implements EventListenerInterface
 {
-//    use Lazily;
-//    use Queueable;
+    //    use Lazily;
+    //    use Queueable;
 
     /**
      * Initialize the listener.

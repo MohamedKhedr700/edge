@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Actions\LoginAction;
 use App\Http\Requests\LoginRequest;
-use App\Http\Requests\RegisterRequest;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Http\JsonResponse;
 

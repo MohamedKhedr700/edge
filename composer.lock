@@ -3422,12 +3422,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MohamedKhedr700/core-action.git",
-                "reference": "d8f80f9df973f2d6a4d2b4fef99b31fb7ef71813"
+                "reference": "1d343cc6798ef61788f3ad98d36de05451a3bc47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MohamedKhedr700/core-action/zipball/d8f80f9df973f2d6a4d2b4fef99b31fb7ef71813",
-                "reference": "d8f80f9df973f2d6a4d2b4fef99b31fb7ef71813",
+                "url": "https://api.github.com/repos/MohamedKhedr700/core-action/zipball/1d343cc6798ef61788f3ad98d36de05451a3bc47",
+                "reference": "1d343cc6798ef61788f3ad98d36de05451a3bc47",
                 "shasum": ""
             },
             "require": {
@@ -3474,7 +3474,7 @@
                 "issues": "https://github.com/MohamedKhedr700/core-action/issues",
                 "source": "https://github.com/MohamedKhedr700/core-action/tree/main"
             },
-            "time": "2023-10-18T21:11:28+00:00"
+            "time": "2023-10-18T21:20:30+00:00"
         },
         {
             "name": "raid/core-auth",

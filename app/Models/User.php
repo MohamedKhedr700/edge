@@ -2,28 +2,12 @@
 
 namespace App\Models;
 
-use App\Actions\LoginAction;
-use App\Actions\ProfileAction;
-use App\Actions\RegisterAction;
-use App\Events\LoginEvent;
-use App\Events\RegisterEvent;
-use App\Http\Gates\Gate;
 use App\Models\ModelFilters\UserFilter;
-use Raid\Core\Action\Traits\Action\Actionable;
-use Raid\Core\Auth\Authentication\Contracts\AuthenticatableInterface;
 use Raid\Core\Auth\Models\Authentication\Account;
 use Raid\Core\Auth\Models\Authentication\Contracts\AccountInterface;
-use Raid\Core\Auth\Traits\Model\Authenticatable;
-use Raid\Core\Event\Traits\Event\Eventable;
-use Raid\Core\Gate\Traits\Gate\Gateable;
 
-class User extends Account implements AccountInterface, AuthenticatableInterface
+class User extends Account implements AccountInterface
 {
-    use Actionable;
-    use Authenticatable;
-    use Eventable;
-    use Gateable;
-
     /**
      * {@inheritdoc}
      */
@@ -58,37 +42,4 @@ class User extends Account implements AccountInterface, AuthenticatableInterface
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
-
-    /**
-     * Get actions.
-     */
-    public static function getActions(): array
-    {
-        return [
-            ProfileAction::class,
-            LoginAction::class,
-            RegisterAction::class,
-        ];
-    }
-
-    /**
-     * Get eventable events.
-     */
-    public static function getEvents(): array
-    {
-        return [
-            LoginEvent::class,
-            RegisterEvent::class,
-        ];
-    }
-
-    /**
-     * Get gateable gates.
-     */
-    public static function getGates(): array
-    {
-        return [
-            Gate::class,
-        ];
-    }
 }
