@@ -16,5 +16,4 @@ class ListUserRequest extends FormRequest
     {
         return $this->withCommonRules();
     }
-
 }

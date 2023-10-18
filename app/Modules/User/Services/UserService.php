@@ -13,4 +13,3 @@ class UserService extends ApiService implements ServiceInterface
      */
     public const REPOSITORY = UserRepository::class;
 }
-

@@ -16,5 +16,4 @@ class StoreUserRequest extends FormRequest
     {
         return $this->withCommonRules();
     }
-
 }

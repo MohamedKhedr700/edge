@@ -10,7 +10,7 @@ trait WithUserCommonRules
     public function commonRules(): array
     {
         return [
-           //
+            //
         ];
     }
 

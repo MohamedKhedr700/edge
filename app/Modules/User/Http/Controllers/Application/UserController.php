@@ -2,8 +2,8 @@
 
 namespace Modules\User\Http\Controllers\Application;
 
-use Raid\Core\Controller\Controllers\Controller;
 use Modules\User\Repositories\UserRepository;
+use Raid\Core\Controller\Controllers\Controller;
 
 class UserController extends Controller
 {

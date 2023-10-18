@@ -11,6 +11,4 @@ class UserServiceProvider extends ServiceProvider
      * {@inheritdoc}
      */
     public const REPOSITORY = UserRepository::class;
-
-
 }

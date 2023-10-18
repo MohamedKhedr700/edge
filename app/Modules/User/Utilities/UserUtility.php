@@ -2,12 +2,12 @@
 
 namespace Modules\User\Utilities;
 
-use Raid\Core\Repository\Utilities\Utility;
-use Modules\User\Utilities\Contracts\UserUtilityInterface;
-use Modules\User\Models\User;
-use Modules\User\Repositories\UserRepository;
 use Modules\User\Http\Transformers\UserTransformer;
+use Modules\User\Models\User;
 use Modules\User\Providers\RouteServiceProvider;
+use Modules\User\Repositories\UserRepository;
+use Modules\User\Utilities\Contracts\UserUtilityInterface;
+use Raid\Core\Repository\Utilities\Utility;
 
 class UserUtility extends Utility implements UserUtilityInterface
 {

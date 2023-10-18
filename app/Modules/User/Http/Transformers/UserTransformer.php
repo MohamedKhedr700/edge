@@ -2,8 +2,8 @@
 
 namespace Modules\User\Http\Transformers;
 
-use Raid\Core\Repository\Transformers\Transformer;
 use Modules\User\Models\User;
+use Raid\Core\Repository\Transformers\Transformer;
 
 class UserTransformer extends Transformer
 {
@@ -13,7 +13,7 @@ class UserTransformer extends Transformer
     public function transform(User $user): array
     {
         return [
-           //
+            //
         ];
     }
 }

@@ -2,20 +2,20 @@
 
 namespace Modules\User\Http\Controllers\Dashboard;
 
+use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Http\JsonResponse;
 use Modules\User\Actions\Crud\CreateUserAction;
 use Modules\User\Actions\Crud\DeleteUserAction;
 use Modules\User\Actions\Crud\FindUserAction;
 use Modules\User\Actions\Crud\ListUserAction;
 use Modules\User\Actions\Crud\UpdateUserAction;
-use Raid\Core\Request\Exceptions\UnvalidatedRequestException;
-use Illuminate\Auth\Access\AuthorizationException;
-use Illuminate\Http\JsonResponse;
+use Modules\User\Http\Requests\ListUserRequest;
 use Modules\User\Http\Requests\StoreUserRequest;
 use Modules\User\Http\Requests\UpdateUserRequest;
-use Modules\User\Http\Requests\ListUserRequest;
-use Modules\User\Repositories\UserRepository;
 use Modules\User\Models\User;
+use Modules\User\Repositories\UserRepository;
 use Raid\Core\Controller\Controllers\Controller;
+use Raid\Core\Request\Exceptions\UnvalidatedRequestException;
 
 class UserController extends Controller
 {
