@@ -1,9 +1,0 @@
-<?php
-
-namespace $MODULE_NAMESPACE$\$STUDLY_NAME$\Models\ModelFilter;
-
-use Raid\Core\Model\Models\Filter\ModelFilter;
-
-class $STUDLY_NAME$Filter extends ModelFilter
-{
-}
