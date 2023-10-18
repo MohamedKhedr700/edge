@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Actions\RegisterAction;
 use App\Http\Requests\RegisterRequest;
+use App\Modules\User\Actions\Auth\RegisterAction;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Http\JsonResponse;
 

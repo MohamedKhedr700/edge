@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Authentication\Authenticator;
+namespace Modules\User\Http\Authentication;
 
-use App\Http\Authentication\Channels\OtpChannel;
-use App\Models\User;
+use Modules\User\Http\Authentication\Channels\OtpChannel;
+use Modules\User\Repositories\UserRepository;
 use Raid\Core\Auth\Authentication\Authenticator;
 use Raid\Core\Auth\Authentication\Channels\SystemAuthChannel;
 use Raid\Core\Auth\Authentication\Contracts\AuthenticatorInterface;
@@ -18,7 +18,7 @@ class UserAuthenticator extends Authenticator implements AuthenticatorInterface
     /**
      * {@inheritdoc}
      */
-    public const AUTHENTICATABLE = User::class;
+    public const AUTHENTICATABLE = UserRepository::class;
 
     /**
      * {@inheritdoc}

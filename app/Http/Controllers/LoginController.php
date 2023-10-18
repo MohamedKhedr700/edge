@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Actions\LoginAction;
 use App\Http\Requests\LoginRequest;
+use App\Modules\User\Actions\Auth\LoginAction;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Http\JsonResponse;
 

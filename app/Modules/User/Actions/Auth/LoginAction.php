@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Actions;
+namespace App\Modules\User\Actions\Auth;
 
-use App\Http\Authentication\Authenticator\UserAuthenticator;
-use App\Models\User;
+use App\Modules\User\Http\Authentication\UserAuthenticator;
+use Modules\User\Repositories\UserRepository;
 use Raid\Core\Action\Actions\Action;
 use Raid\Core\Action\Actions\Contracts\ActionInterface;
 use Raid\Core\Auth\Authentication\Contracts\AuthChannelInterface;
@@ -18,7 +18,7 @@ class LoginAction extends Action implements ActionInterface
     /**
      * {@inheritDoc}
      */
-    public const ACTIONABLE = User::class;
+    public const ACTIONABLE = UserRepository::class;
 
     /**
      * Handle the action.

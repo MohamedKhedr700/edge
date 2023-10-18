@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Actions;
+namespace App\Modules\User\Actions\Auth;
 
-use App\Models\User;
-use App\Repositories\UserRepository;
 use Exception;
+use Modules\User\Models\User;
+use Modules\User\Repositories\UserRepository;
 use Raid\Core\Action\Actions\Action;
 use Raid\Core\Action\Actions\Contracts\ActionInterface;
 

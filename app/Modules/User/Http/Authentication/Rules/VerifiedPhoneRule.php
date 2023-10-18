@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Authentication\Rules;
+namespace Modules\User\Http\Authentication\Rules;
 
 use Raid\Core\Auth\Authentication\Contracts\AuthChannelInterface;
 use Raid\Core\Auth\Authentication\Contracts\AuthRuleInterface;
