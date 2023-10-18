@@ -2,7 +2,7 @@
 
 namespace Modules\User\Repositories\Contracts;
 
-use Modules\Core\Repositories\Contracts\RepositoryInterface;
+use Raid\Core\Repository\Repositories\Contracts\RepositoryInterface;
 
 interface UserRepositoryInterface extends RepositoryInterface
 {
