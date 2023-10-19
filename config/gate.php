@@ -33,7 +33,9 @@ return [
     |
     */
 
-    'gateables' => [],
+    'gateables' => [
+        \Modules\Post\Repositories\PostRepository::class,
+    ],
 
     /*
     |--------------------------------------------------------------------------

@@ -8,7 +8,7 @@ use Raid\Core\Action\Actions\Contracts\ActionInterface;
 use Raid\Core\Auth\Models\Authentication\Contracts\AccountInterface;
 use Raid\Core\Enum\Enums\Action as ActionEnum;
 
-class ProfileAction extends Action implements ActionInterface
+class FindUserProfileAction extends Action implements ActionInterface
 {
     /**
      * {@inheritdoc}

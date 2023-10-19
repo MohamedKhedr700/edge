@@ -2,6 +2,7 @@
 
 namespace Modules\Post\Utilities;
 
+use Modules\Post\Http\Gates\PostGate;
 use Modules\Post\Http\Transformers\PostTransformer;
 use Modules\Post\Models\Post;
 use Modules\Post\Providers\RouteServiceProvider;
@@ -40,4 +41,14 @@ class PostUtility extends Utility implements PostUtilityInterface
      * {@inheritdoc}
      */
     public const ROUTE_SERVICE_PROVIDER = RouteServiceProvider::class;
+
+    /**
+     * {@inheritdoc}
+     */
+    public static function getGates(): array
+    {
+        return [
+            PostGate::class,
+        ];
+    }
 }

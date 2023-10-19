@@ -10,6 +10,17 @@ use Raid\Core\Gate\Gates\Gate;
 class UserGate extends Gate implements GateInterface
 {
     /**
+     * {@inheritdoc}
+     */
+    public const ACTIONS = [
+        'create',
+        'list',
+        'find',
+        'update',
+        'delete',
+    ];
+
+    /**
      * Determine whether the account can create a user.
      */
     public function create(AccountInterface $account): bool

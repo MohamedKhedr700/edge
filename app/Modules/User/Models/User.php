@@ -29,4 +29,12 @@ class User extends Account implements AccountInterface
     protected $casts = [
         'last_login_at' => 'datetime',
     ];
+
+    /**
+     * Determine whether the account is subscribed.
+     */
+    public function subscribed(): bool
+    {
+        return $this->attribute('subscribed', false);
+    }
 }

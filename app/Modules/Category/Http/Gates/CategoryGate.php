@@ -10,6 +10,17 @@ use Raid\Core\Gate\Gates\Gate;
 class CategoryGate extends Gate implements GateInterface
 {
     /**
+     * {@inheritdoc}
+     */
+    public const ACTIONS = [
+        'create',
+        'list',
+        'find',
+        'update',
+        'delete',
+    ];
+
+    /**
      * Determine whether the account can create a category.
      */
     public function create(AccountInterface $account): bool
@@ -18,7 +29,7 @@ class CategoryGate extends Gate implements GateInterface
     }
 
     /**
-     * Determine whether the account can list categorys.
+     * Determine whether the account can list categories.
      */
     public function list(AccountInterface $account): bool
     {

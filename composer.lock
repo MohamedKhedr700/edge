@@ -3670,12 +3670,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MohamedKhedr700/core-controller.git",
-                "reference": "009238f0010ff91256175ff3388c726332862972"
+                "reference": "79fe4b84c13835a067e677dec49d6f557f66c5ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MohamedKhedr700/core-controller/zipball/009238f0010ff91256175ff3388c726332862972",
-                "reference": "009238f0010ff91256175ff3388c726332862972",
+                "url": "https://api.github.com/repos/MohamedKhedr700/core-controller/zipball/79fe4b84c13835a067e677dec49d6f557f66c5ca",
+                "reference": "79fe4b84c13835a067e677dec49d6f557f66c5ca",
                 "shasum": ""
             },
             "require": {
@@ -3715,7 +3715,7 @@
                 "issues": "https://github.com/MohamedKhedr700/core-controller/issues",
                 "source": "https://github.com/MohamedKhedr700/core-controller/tree/main"
             },
-            "time": "2023-10-18T23:39:56+00:00"
+            "time": "2023-10-19T22:44:04+00:00"
         },
         {
             "name": "raid/core-enum",
@@ -9667,7 +9667,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "raid/core-action": 20,
-        "raid/core-controller": 20,
+        "raid/core-auth": 20,
         "raid/core-event": 20,
         "raid/core-gate": 20,
         "raid/core-model": 20,

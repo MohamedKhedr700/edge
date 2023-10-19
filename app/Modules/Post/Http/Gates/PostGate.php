@@ -10,11 +10,23 @@ use Raid\Core\Gate\Gates\Gate;
 class PostGate extends Gate implements GateInterface
 {
     /**
+     * {@inheritdoc}
+     */
+    public const ACTIONS = [
+        'create',
+        'list',
+        'find',
+        'update',
+        'delete',
+    ];
+
+    /**
      * Determine whether the account can create a post.
      */
     public function create(AccountInterface $account): bool
     {
         return true;
+        return $account->subscribed();
     }
 
     /**
