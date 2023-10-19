@@ -13,4 +13,3 @@ class CategoryService extends ActionService implements ActionServiceInterface
      */
     public const REPOSITORY = CategoryRepository::class;
 }
-

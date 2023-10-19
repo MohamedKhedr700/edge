@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Modules\Category\Http\Controllers\Application\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +15,6 @@ use Modules\Category\Http\Controllers\Application\CategoryController;
 
 Route::group([
     'prefix' => 'v1/categorys',
-    'middleware' => ['auth:device']
+    'middleware' => ['auth:device'],
 ], function () {
 });

@@ -2,8 +2,8 @@
 
 namespace Modules\Category\Http\Controllers\Application;
 
-use Raid\Core\Controller\Controllers\Controller;
 use Modules\Category\Repositories\CategoryRepository;
+use Raid\Core\Controller\Controllers\Controller;
 
 class CategoryController extends Controller
 {
