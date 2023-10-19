@@ -14,7 +14,12 @@ class UserUtility extends Utility implements UserUtilityInterface
     /**
      * {@inheritdoc}
      */
-    public const MODULE = 'user';
+    public const MODULE_LOWER = 'user';
+
+    /**
+     * {@inheritdoc}
+     */
+    public const MODULE_UPPER = 'User';
 
     /**
      * {@inheritdoc}

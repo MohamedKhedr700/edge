@@ -1,8 +1,8 @@
 <?php
 
-namespace $MODULE_NAMESPACE$\$STUDLY_NAME$\Traits\Request;
+namespace Modules\Post\Traits\Request;
 
-trait With$STUDLY_NAME$CommonRules
+trait WithPostCommonRules
 {
     /**
      * Define common Rules.

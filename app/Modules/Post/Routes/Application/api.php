@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use $MODULE_NAMESPACE$\$STUDLY_NAME$\Http\Controllers\Application\$STUDLY_NAME$Controller;
+use Modules\Post\Http\Controllers\Application\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +15,7 @@ use $MODULE_NAMESPACE$\$STUDLY_NAME$\Http\Controllers\Application\$STUDLY_NAME$C
 */
 
 Route::group([
-    'prefix' => 'v1/$LOWER_NAME$s',
+    'prefix' => 'v1/posts',
     'middleware' => ['auth:device']
 ], function () {
 });
