@@ -16,7 +16,11 @@ class UserTransformer extends Transformer
         return [
             'id' => $user->attribute('id'),
             'phone' => $user->attribute('phone'),
-            'createdAt' => Carbon::parse($user->getAttribute('created_at'))->toISOString(),
+            'lastLoginAt' => $user->getAttribute('last_login_at')->toIsoString(),
+            'lastLoginIp' => $user->attribute('last_login_ip'),
+            'isPremiumSubscribed' => $user->getAttribute('is_premium_subscribed'),
+            'isSubscribed' => $user->getAttribute('is_subscribed'),
+            'createdAt' => $user->getAttribute('created_at')->toIsoString(),
         ];
     }
 }

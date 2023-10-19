@@ -21,13 +21,16 @@ class User extends Account implements AccountInterface
     /**
      * {@inheritdoc}
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'is_subscribed', 'is_premium_subscribed',
+    ];
 
     /**
      * {@inheritdoc}
      */
     protected $casts = [
-        'last_login_at' => 'datetime',
+        'is_subscribed' => 'boolean',
+        'is_premium_subscribed' => 'boolean',
     ];
 
     /**

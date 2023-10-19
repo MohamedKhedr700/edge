@@ -17,6 +17,8 @@ class UpdateUserRequest extends FormRequest
         return $this->withCommonRules([
             'phone' => ['sometimes'],
             'password' => ['sometimes'],
+            'isSubscribed' => ['required', 'sometimes', 'boolean'],
+            'isPremiumSubscribed' => ['required', 'sometimes', 'boolean'],
         ]);
     }
 }
