@@ -3,6 +3,7 @@
 namespace Modules\Post\Http\Gates;
 
 use Modules\Post\Models\Post;
+use Modules\User\Models\User;
 use Raid\Core\Auth\Models\Authentication\Contracts\AccountInterface;
 use Raid\Core\Gate\Gates\Contracts\GateInterface;
 use Raid\Core\Gate\Gates\Gate;
@@ -23,9 +24,9 @@ class PostGate extends Gate implements GateInterface
     /**
      * Determine whether the account can create a post.
      */
-    public function create(AccountInterface $account): bool
+    public function create(User $account): bool
     {
-        return $account->subscribed() || $account->premiumSubscribed();
+        return $account->isSubscribed() || $account->isPremiumSubscribed();
     }
 
     /**

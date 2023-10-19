@@ -36,16 +36,16 @@ class User extends Account implements AccountInterface
     /**
      * Determine whether the account is subscribed.
      */
-    public function subscribed(): bool
+    public function isSubscribed(): bool
     {
-        return $this->attribute('subscribed', false);
+        return (bool) $this->attribute('is_subscribed', false);
     }
 
     /**
      * Determine whether the account is premium subscribed.
      */
-    public function premiumSubscribed(): bool
+    public function isPremiumSubscribed(): bool
     {
-        return $this->attribute('premium_subscribed', false);
+        return (bool) $this->attribute('is_premium_subscribed', false);
     }
 }
