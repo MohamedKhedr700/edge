@@ -35,12 +35,12 @@ class Post extends Model
      */
     public static function createdByScope(): void
     {
-        if (! Auth::guard('user')->check()) {
+        if (! auth_check('user')) {
             return;
         }
 
         static::addGlobalScope('created_by', function ($query) {
-            $query->where('created_by', auth()->user()?->id);
+            $query->where('created_by', account()->accountId());
         });
     }
 }
