@@ -2,21 +2,33 @@
 
 namespace App\Modules\User\Listeners;
 
+use App\Modules\User\Services\MailService;
+use Modules\User\Models\User;
 use Raid\Core\Event\Events\Contracts\EventListenerInterface;
+use Raid\Core\Event\Traits\Event\Queueable;
 
 class SendRegisterEmail implements EventListenerInterface
 {
+    use Queueable;
+
     /**
-     * Initialize the listener.
+     * Mail service instance.
      */
-    public function init(): void
+    private MailService $mailService;
+
+    /**
+     * Create a new event listener instance.
+     */
+    public function __construct(MailService $mailService)
     {
+        $this->mailService = $mailService;
     }
 
     /**
      * Handle the listener.
      */
-    public function handle(): void
+    public function handle(User $user): void
     {
+        $this->mailService->send($user);
     }
 }

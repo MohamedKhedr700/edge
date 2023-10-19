@@ -4,13 +4,13 @@ namespace App\Modules\User\Services;
 
 use Raid\Core\Auth\Models\Authentication\Contracts\AccountInterface;
 
-class OtpService
+class MailService
 {
     /**
-     * Send OTP to the user.
+     * Send email.
      */
     public function send(AccountInterface $account)
     {
-        // Send OTP to the user.
+        // Send email to the account.
     }
 }
