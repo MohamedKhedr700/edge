@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\LoginRequest;
-use App\Modules\User\Actions\Auth\LoginAction;
+use App\Modules\User\Actions\Auth\LoginUserAction;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Http\JsonResponse;
 
@@ -14,7 +14,7 @@ class LoginController extends Controller
      *
      * @throws AuthorizationException
      */
-    public function __invoke(LoginRequest $request, LoginAction $loginAction): JsonResponse
+    public function __invoke(LoginRequest $request, LoginUserAction $loginAction): JsonResponse
     {
         $loginAction->authorize();
 

@@ -3,9 +3,10 @@
 namespace Modules\User\Models;
 
 use Modules\User\Models\ModelFilter\UserFilter;
-use Raid\Core\Model\Models\Model;
+use Raid\Core\Auth\Models\Authentication\Account;
+use Raid\Core\Auth\Models\Authentication\Contracts\AccountInterface;
 
-class User extends Model
+class User extends Account implements AccountInterface
 {
     /**
      * {@inheritdoc}

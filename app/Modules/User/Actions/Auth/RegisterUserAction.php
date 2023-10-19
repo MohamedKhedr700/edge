@@ -8,7 +8,7 @@ use Modules\User\Repositories\UserRepository;
 use Raid\Core\Action\Actions\Action;
 use Raid\Core\Action\Actions\Contracts\ActionInterface;
 
-class RegisterAction extends Action implements ActionInterface
+class RegisterUserAction extends Action implements ActionInterface
 {
     /**
      * {@inheritdoc}

@@ -2,13 +2,13 @@
 
 namespace App\Modules\User\Actions\Auth;
 
-use App\Modules\User\Http\Authentication\UserAuthenticator;
+use Modules\User\Http\Authentication\UserAuthenticator;
 use Modules\User\Repositories\UserRepository;
 use Raid\Core\Action\Actions\Action;
 use Raid\Core\Action\Actions\Contracts\ActionInterface;
 use Raid\Core\Auth\Authentication\Contracts\AuthChannelInterface;
 
-class LoginAction extends Action implements ActionInterface
+class LoginUserAction extends Action implements ActionInterface
 {
     /**
      * {@inheritdoc}

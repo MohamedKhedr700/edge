@@ -2,9 +2,9 @@
 
 namespace Modules\User\Http\Authentication\Channels;
 
-use App\Modules\User\Http\Authentication\Rules\VerifiedPhoneRule;
-use App\Modules\User\Http\Authentication\Steps\SendOtpStep;
-use App\Modules\User\Http\Authentication\Workers\PhoneWorker;
+use Modules\User\Http\Authentication\Rules\VerifiedPhoneRule;
+use Modules\User\Http\Authentication\Steps\SendOtpStep;
+use Modules\User\Http\Authentication\Workers\PhoneWorker;
 use Raid\Core\Auth\Authentication\AuthChannel;
 use Raid\Core\Auth\Authentication\Contracts\AuthChannelInterface;
 

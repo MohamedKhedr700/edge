@@ -16,8 +16,9 @@ use Modules\User\Http\Controllers\Application\UserController;
 
 Route::group([
     'prefix' => 'v1/users',
-    'middleware' => ['auth:device'],
+    //    'middleware' => ['auth:device'],
 ], function () {
-    //    list users
-    //    Route::get('/', [UserController::class, 'index']);
+
+    Route::post('register', [UserController::class, 'register']);
+    Route::post('login', [UserController::class, 'login']);
 });
