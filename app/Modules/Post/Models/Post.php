@@ -2,6 +2,7 @@
 
 namespace Modules\Post\Models;
 
+use Illuminate\Support\Facades\Auth;
 use Modules\Post\Models\ModelFilter\PostFilter;
 use Raid\Core\Model\Models\Model;
 
@@ -19,6 +20,9 @@ class Post extends Model
         'title', 'content',
     ];
 
+    /**
+     * {@inheritdoc}
+     */
     public static function boot(): void
     {
         parent::boot();
@@ -31,8 +35,12 @@ class Post extends Model
      */
     public static function createdByScope(): void
     {
-        static::addGlobalScope('user', function ($query) {
-            $query->where('created_by', account()->accountId());
+        if (! Auth::guard('user')->check()) {
+            return;
+        }
+
+        static::addGlobalScope('created_by', function ($query) {
+            $query->where('created_by', auth()->user()?->id);
         });
     }
 }
