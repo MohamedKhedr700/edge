@@ -16,14 +16,12 @@ class User extends Account implements AccountInterface
     /**
      * {@inheritdoc}
      */
-    protected $fillable = [
-        //
-    ];
+    protected $fillable = [];
 
     /**
      * {@inheritdoc}
      */
     protected $casts = [
-        'created_at' => 'datetime',
+        'last_login_at' => 'datetime',
     ];
 }

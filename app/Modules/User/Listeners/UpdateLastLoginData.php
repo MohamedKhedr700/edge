@@ -2,19 +2,23 @@
 
 namespace App\Modules\User\Listeners;
 
+use Exception;
 use Modules\User\Actions\Crud\UpdateUserAction;
 use Raid\Core\Auth\Authentication\Contracts\AuthChannelInterface;
+use Raid\Core\Auth\Models\Authentication\Contracts\AccountInterface;
 use Raid\Core\Event\Events\Contracts\EventListenerInterface;
+use Raid\Core\Model\Models\Contracts\ModelInterface;
 
-class UpdateLastLoginIp implements EventListenerInterface
+class UpdateLastLoginData implements EventListenerInterface
 {
     /**
      * Update user action instance.
      */
-    protected UpdateUserAction $updateUserAction;
+    private UpdateUserAction $updateUserAction;
+
 
     /**
-     * Create a new listener instance.
+     * Create a new event listener instance.
      */
     public function __construct(UpdateUserAction $updateUserAction)
     {
@@ -23,12 +27,17 @@ class UpdateLastLoginIp implements EventListenerInterface
 
     /**
      * Handle the listener.
+     *
+     * @throws Exception
      */
     public function handle(AuthChannelInterface $authChannel): void
     {
-        $account = $authChannel->account();
+        if ($authChannel->errors()->any()) {
+            return;
+        }
 
-        $this->updateUserAction->execute($account, [
+        $this->updateUserAction->handle($authChannel->account(), [
+            'last_login_at' => now(),
             'last_login_ip' => request()->ip(),
         ]);
     }
