@@ -2,11 +2,11 @@
 
 namespace Modules\User\Services;
 
-use Modules\Core\Services\ApiService;
-use Modules\Core\Services\Contracts\ServiceInterface;
 use Modules\User\Repositories\UserRepository;
+use Raid\Core\Repository\Services\ActionService;
+use Raid\Core\Repository\Services\Contracts\ActionServiceInterface;
 
-class UserService extends ApiService implements ServiceInterface
+class UserService extends ActionService implements ActionServiceInterface
 {
     /**
      * {@inheritdoc}

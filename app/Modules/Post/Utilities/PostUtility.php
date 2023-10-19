@@ -2,12 +2,12 @@
 
 namespace Modules\Post\Utilities;
 
-use Raid\Core\Repository\Utilities\Utility;
-use Modules\Post\Utilities\Contracts\PostUtilityInterface;
-use Modules\Post\Models\Post;
-use Modules\Post\Repositories\PostRepository;
 use Modules\Post\Http\Transformers\PostTransformer;
+use Modules\Post\Models\Post;
 use Modules\Post\Providers\RouteServiceProvider;
+use Modules\Post\Repositories\PostRepository;
+use Modules\Post\Utilities\Contracts\PostUtilityInterface;
+use Raid\Core\Repository\Utilities\Utility;
 
 class PostUtility extends Utility implements PostUtilityInterface
 {
