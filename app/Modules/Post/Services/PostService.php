@@ -2,11 +2,11 @@
 
 namespace Modules\Post\Services;
 
-use Modules\Core\Services\ApiService;
-use Modules\Core\Services\Contracts\ServiceInterface;
+use Raid\Core\Repository\Services\Contracts\ActionServiceInterface;
+use Raid\Core\Repository\Services\ActionService;
 use Modules\Post\Repositories\PostRepository;
 
-class PostService extends ApiService implements ServiceInterface
+class PostService extends ActionService implements ActionServiceInterface
 {
     /**
      * {@inheritdoc}
