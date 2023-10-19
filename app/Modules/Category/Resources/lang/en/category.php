@@ -2,7 +2,7 @@
 
 return [
     // module name
-    '$LOWER_NAME$' => '$STUDLY_NAME$',
+    'category' => 'Category',
 
     // attributes
     'attributes' => [],

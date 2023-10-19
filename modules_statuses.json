@@ -1,4 +1,5 @@
 {
     "User": true,
-    "Post": true
+    "Post": true,
+    "Category": true
 }
