@@ -23,8 +23,16 @@ class Post extends Model
     {
         parent::boot();
 
+        static::createdByScope();
+    }
+
+    /**
+     * Scope a query to only include posts created by the given account id.
+     */
+    public static function createdByScope(): void
+    {
         static::addGlobalScope('user', function ($query) {
-            $query->where('create_by', account()->accountId());
+            $query->where('created_by', account()->accountId());
         });
     }
 }
