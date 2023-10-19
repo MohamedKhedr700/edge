@@ -16,7 +16,6 @@ class UpdateLastLoginData implements EventListenerInterface
      */
     private UpdateUserAction $updateUserAction;
 
-
     /**
      * Create a new event listener instance.
      */
