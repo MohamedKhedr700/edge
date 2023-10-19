@@ -3956,12 +3956,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MohamedKhedr700/core-modules.git",
-                "reference": "cf8b75c51896582d9fe1c292ab014ef471a1b0bb"
+                "reference": "2d037ce71c758957aafa0422aa8a2741e2b02558"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MohamedKhedr700/core-modules/zipball/cf8b75c51896582d9fe1c292ab014ef471a1b0bb",
-                "reference": "cf8b75c51896582d9fe1c292ab014ef471a1b0bb",
+                "url": "https://api.github.com/repos/MohamedKhedr700/core-modules/zipball/2d037ce71c758957aafa0422aa8a2741e2b02558",
+                "reference": "2d037ce71c758957aafa0422aa8a2741e2b02558",
                 "shasum": ""
             },
             "require": {
@@ -3998,7 +3998,7 @@
                 "issues": "https://github.com/MohamedKhedr700/core-modules/issues",
                 "source": "https://github.com/MohamedKhedr700/core-modules/tree/main"
             },
-            "time": "2023-10-19T18:37:17+00:00"
+            "time": "2023-10-19T19:20:27+00:00"
         },
         {
             "name": "raid/core-repository",

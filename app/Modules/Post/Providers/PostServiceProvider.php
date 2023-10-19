@@ -11,6 +11,4 @@ class PostServiceProvider extends ServiceProvider
      * {@inheritdoc}
      */
     public const REPOSITORY = PostRepository::class;
-
-
 }

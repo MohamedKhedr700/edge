@@ -16,5 +16,4 @@ class UpdatePostRequest extends FormRequest
     {
         return $this->withCommonRules();
     }
-
 }

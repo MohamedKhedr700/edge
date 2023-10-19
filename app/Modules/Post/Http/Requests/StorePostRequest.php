@@ -16,5 +16,4 @@ class StorePostRequest extends FormRequest
     {
         return $this->withCommonRules();
     }
-
 }
