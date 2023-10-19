@@ -5,9 +5,7 @@ namespace App\Modules\User\Listeners;
 use Exception;
 use Modules\User\Actions\Crud\UpdateUserAction;
 use Raid\Core\Auth\Authentication\Contracts\AuthChannelInterface;
-use Raid\Core\Auth\Models\Authentication\Contracts\AccountInterface;
 use Raid\Core\Event\Events\Contracts\EventListenerInterface;
-use Raid\Core\Model\Models\Contracts\ModelInterface;
 
 class UpdateLastLoginData implements EventListenerInterface
 {
