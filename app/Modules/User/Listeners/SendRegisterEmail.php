@@ -18,6 +18,5 @@ class SendRegisterEmail implements EventListenerInterface
      */
     public function handle(): void
     {
-        dd('send email');
     }
 }
