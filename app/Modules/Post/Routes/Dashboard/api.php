@@ -16,7 +16,7 @@ use Modules\Post\Http\Controllers\Dashboard\PostController;
 
 Route::group([
     'prefix' => 'v1/dashboard/posts',
-    'middleware' => ['auth:admin'],
+    'middleware' => ['auth:admin']
 ], function () {
     // store post
     Route::post('/', [PostController::class, 'store']);

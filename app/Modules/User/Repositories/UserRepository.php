@@ -18,8 +18,11 @@ class UserRepository extends Repository implements AuthenticatableInterface, Use
      */
     public const UTILITY = UserUtility::class;
 
-    public function getAccount(string $key, mixed $value): ?AccountInterface
-    {
-        return $this->model->where($key, $value)->first();
-    }
+    /**
+     * {@inheritdoc}
+     */
+//    public function getAccount(string $key, mixed $value): ?AccountInterface
+//    {
+//        return $this->model()->where($key, $value)->first();
+//    }
 }

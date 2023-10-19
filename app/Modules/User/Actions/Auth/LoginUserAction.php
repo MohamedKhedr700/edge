@@ -7,13 +7,15 @@ use Modules\User\Repositories\UserRepository;
 use Raid\Core\Action\Actions\Action;
 use Raid\Core\Action\Actions\Contracts\ActionInterface;
 use Raid\Core\Auth\Authentication\Contracts\AuthChannelInterface;
+use Raid\Core\Auth\Exceptions\Authentication\InvalidChannelException;
+use Raid\Core\Enum\Enums\Action as ActionEnum;
 
 class LoginUserAction extends Action implements ActionInterface
 {
     /**
      * {@inheritdoc}
      */
-    public const ACTION = 'login';
+    public const ACTION = ActionEnum::LOGIN;
 
     /**
      * {@inheritDoc}
@@ -22,6 +24,8 @@ class LoginUserAction extends Action implements ActionInterface
 
     /**
      * Handle the action.
+     *
+     * @throws InvalidChannelException
      */
     public function handle(array $credentials): AuthChannelInterface
     {

@@ -4,8 +4,9 @@ namespace Modules\User\Http\Controllers\Application;
 
 use App\Modules\User\Actions\Auth\LoginUserAction;
 use App\Modules\User\Actions\Auth\RegisterUserAction;
+use App\Modules\User\Http\Requests\LoginUserRequest;
+use App\Modules\User\Http\Requests\RegisterUserRequest;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use Modules\User\Repositories\UserRepository;
 use Raid\Core\Controller\Controllers\Controller;
 
@@ -19,27 +20,31 @@ class UserController extends Controller
     /**
      * Register the user.
      */
-    public function register(Request $request, RegisterUserAction $registerUserAction): JsonResponse
+    public function register(RegisterUserRequest $request, RegisterUserAction $registerUserAction): JsonResponse
     {
-        $user = $registerUserAction->execute($request->all());
+        $registerUserAction->authorize();
+
+        $user = $registerUserAction->execute($request->passed());
 
         return $this->success('User created', [
-            'user' => $user,
+            'resource' => $user,
         ]);
     }
 
     /**
      * Login the user.
      */
-    public function login(Request $request, LoginUserAction $loginUserAction): JsonResponse
+    public function login(LoginUserRequest $request, LoginUserAction $loginUserAction): JsonResponse
     {
-        $loginChannel = $loginUserAction->execute($request->all());
+        $loginUserAction->authorize();
+
+        $loginChannel = $loginUserAction->execute($request->passed());
 
         return $this->success('User logged in', [
             'channel' => $loginChannel->channel(),
             'token' => $loginChannel->stringToken(),
-            'account' => $loginChannel->account(),
             'errors' => $loginChannel->errors(),
+            'resource' => $loginChannel->account(),
         ]);
     }
 }

@@ -2,8 +2,8 @@
 
 namespace Modules\Post\Http\Transformers;
 
-use Modules\Post\Models\Post;
 use Raid\Core\Repository\Transformers\Transformer;
+use Modules\Post\Models\Post;
 
 class PostTransformer extends Transformer
 {

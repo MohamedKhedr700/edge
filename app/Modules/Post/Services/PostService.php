@@ -2,9 +2,9 @@
 
 namespace Modules\Post\Services;
 
-use Modules\Post\Repositories\PostRepository;
-use Raid\Core\Repository\Services\ActionService;
 use Raid\Core\Repository\Services\Contracts\ActionServiceInterface;
+use Raid\Core\Repository\Services\ActionService;
+use Modules\Post\Repositories\PostRepository;
 
 class PostService extends ActionService implements ActionServiceInterface
 {
@@ -13,3 +13,4 @@ class PostService extends ActionService implements ActionServiceInterface
      */
     public const REPOSITORY = PostRepository::class;
 }
+

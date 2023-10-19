@@ -1,11 +1,11 @@
 <?php
 
-namespace Modules\User\Http\Requests;
+namespace App\Modules\User\Http\Requests;
 
 use Modules\User\Traits\Request\WithUserCommonRules;
 use Raid\Core\Request\Requests\FormRequest;
 
-class UpdateUserRequest extends FormRequest
+class RegisterUserRequest extends FormRequest
 {
     use WithUserCommonRules;
 
@@ -14,9 +14,6 @@ class UpdateUserRequest extends FormRequest
      */
     public function rules(): array
     {
-        return $this->withCommonRules([
-            'phone' => ['sometimes'],
-            'password' => ['sometimes'],
-        ]);
+        return $this->withCommonRules();
     }
 }

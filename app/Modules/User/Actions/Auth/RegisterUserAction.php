@@ -7,13 +7,14 @@ use Modules\User\Models\User;
 use Modules\User\Repositories\UserRepository;
 use Raid\Core\Action\Actions\Action;
 use Raid\Core\Action\Actions\Contracts\ActionInterface;
+use Raid\Core\Enum\Enums\Action as ActionEnum;
 
 class RegisterUserAction extends Action implements ActionInterface
 {
     /**
      * {@inheritdoc}
      */
-    public const ACTION = 'register';
+    public const ACTION = ActionEnum::REGISTER;
 
     /**
      * {@inheritDoc}

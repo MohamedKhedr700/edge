@@ -2,6 +2,8 @@
 
 namespace Modules\User\Utilities;
 
+use App\Modules\User\Events\LoginUserEvent;
+use App\Modules\User\Events\RegisterUserEvent;
 use Modules\User\Http\Transformers\UserTransformer;
 use Modules\User\Models\User;
 use Modules\User\Providers\RouteServiceProvider;
@@ -40,4 +42,15 @@ class UserUtility extends Utility implements UserUtilityInterface
      * {@inheritdoc}
      */
     public const ROUTE_SERVICE_PROVIDER = RouteServiceProvider::class;
+
+    /**
+     * {@inheritdoc}
+     */
+    public static function getEvents(): array
+    {
+        return [
+            LoginUserEvent::class,
+            RegisterUserEvent::class,
+        ];
+    }
 }

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Modules\Post\Http\Controllers\Application\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::group([
     'prefix' => 'v1/posts',
-    'middleware' => ['auth:device'],
+    'middleware' => ['auth:device']
 ], function () {
 });

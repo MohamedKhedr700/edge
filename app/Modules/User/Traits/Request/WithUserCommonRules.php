@@ -2,6 +2,8 @@
 
 namespace Modules\User\Traits\Request;
 
+use Modules\User\Utilities\UserUtility;
+
 trait WithUserCommonRules
 {
     /**
@@ -10,7 +12,8 @@ trait WithUserCommonRules
     public function commonRules(): array
     {
         return [
-            //
+            'phone' => ['required', 'string'],
+            'password' => ['required', 'string'],
         ];
     }
 
@@ -20,7 +23,8 @@ trait WithUserCommonRules
     public function attributes(): array
     {
         return [
-            //
+            'phone' => UserUtility::trans('user.phone'),
+            'password' => UserUtility::trans('user.password'),
         ];
     }
 }
