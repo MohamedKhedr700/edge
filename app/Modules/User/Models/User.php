@@ -37,4 +37,12 @@ class User extends Account implements AccountInterface
     {
         return $this->attribute('subscribed', false);
     }
+
+    /**
+     * Determine whether the account is premium subscribed.
+     */
+    public function premiumSubscribed(): bool
+    {
+        return $this->attribute('premium_subscribed', false);
+    }
 }

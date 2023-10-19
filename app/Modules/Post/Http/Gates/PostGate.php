@@ -25,8 +25,7 @@ class PostGate extends Gate implements GateInterface
      */
     public function create(AccountInterface $account): bool
     {
-        return true;
-        return $account->subscribed();
+        return $account->subscribed() || $account->premiumSubscribed();
     }
 
     /**

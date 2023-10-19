@@ -2,6 +2,7 @@
 
 namespace Modules\Post\Utilities;
 
+use App\Modules\Post\Http\Gates\PremiumPostGate;
 use Modules\Post\Http\Gates\PostGate;
 use Modules\Post\Http\Transformers\PostTransformer;
 use Modules\Post\Models\Post;
