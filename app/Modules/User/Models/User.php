@@ -11,6 +11,11 @@ class User extends Account implements AccountInterface
     /**
      * {@inheritdoc}
      */
+    public const ACCOUNT_TYPE = 'user';
+
+    /**
+     * {@inheritdoc}
+     */
     protected string $filter = UserFilter::class;
 
     /**

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Modules\Post\Http\Controllers\Dashboard\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::group([
     'prefix' => 'v1/posts',
-    'middleware' => ['auth:device'],
+    'middleware' => ['auth:user'],
 ], function () {
+    // store post
+    Route::post('/', [PostController::class, 'store']);
+    // list posts
+    Route::get('/', [PostController::class, 'index']);
+    // show post
+    Route::get('{id}', [PostController::class, 'show']);
+    // update post
+    Route::put('{id}', [PostController::class, 'update']);
+    // delete post
+    Route::delete('{id}', [PostController::class, 'delete']);
 });

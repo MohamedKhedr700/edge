@@ -2,6 +2,8 @@
 
 namespace Modules\Post\Traits\Request;
 
+use Modules\Post\Utilities\PostUtility;
+
 trait WithPostCommonRules
 {
     /**
@@ -9,7 +11,10 @@ trait WithPostCommonRules
      */
     public function commonRules(): array
     {
-        return [];
+        return [
+            'title' => ['required', 'string', 'max:255'],
+            'content' => ['required', 'string', 'max:65535'],
+        ];
     }
 
     /**
@@ -17,6 +22,9 @@ trait WithPostCommonRules
      */
     public function attributes(): array
     {
-        return [];
+        return [
+            'title' => PostUtility::trans('post.attributes.title'),
+            'content' => PostUtility::trans('post.attributes.content'),
+        ];
     }
 }

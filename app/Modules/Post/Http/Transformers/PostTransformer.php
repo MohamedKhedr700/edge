@@ -12,6 +12,10 @@ class PostTransformer extends Transformer
      */
     public function transform(Post $post): array
     {
-        return [];
+        return [
+            'id' => $post->attribute('id'),
+            'title' => $post->attribute('title'),
+            'content' => $post->attribute('content'),
+        ];
     }
 }

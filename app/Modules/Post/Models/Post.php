@@ -15,5 +15,16 @@ class Post extends Model
     /**
      * {@inheritdoc}
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'title', 'content',
+    ];
+
+    public static function boot(): void
+    {
+        parent::boot();
+
+        static::addGlobalScope('user', function ($query) {
+            $query->where('create_by', account()->accountId());
+        });
+    }
 }
