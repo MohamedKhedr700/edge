@@ -25,6 +25,14 @@ class SendRegisterEmail implements EventListenerInterface
     }
 
     /**
+     * Get the name of the queue the listener should be sent to.
+     */
+    public function onQueue(): string
+    {
+        return 'mail';
+    }
+
+    /**
      * Handle the listener.
      */
     public function handle(User $user): void
