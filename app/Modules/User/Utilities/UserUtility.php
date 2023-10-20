@@ -26,26 +26,6 @@ class UserUtility extends Utility implements UserUtilityInterface
     /**
      * {@inheritdoc}
      */
-    public const MODEL = User::class;
-
-    /**
-     * {@inheritdoc}
-     */
-    public const REPOSITORY = UserRepository::class;
-
-    /**
-     * {@inheritdoc}
-     */
-    public const TRANSFORMER = UserTransformer::class;
-
-    /**
-     * {@inheritdoc}
-     */
-    public const ROUTE_SERVICE_PROVIDER = RouteServiceProvider::class;
-
-    /**
-     * {@inheritdoc}
-     */
     public static function getEvents(): array
     {
         return [

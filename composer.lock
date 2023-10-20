@@ -3956,12 +3956,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MohamedKhedr700/core-modules.git",
-                "reference": "7eb85a9d0fe0f3ed84348432ebea609c957e8019"
+                "reference": "6e448d50df820627338bc5b1e8f9c58f4a166a63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MohamedKhedr700/core-modules/zipball/7eb85a9d0fe0f3ed84348432ebea609c957e8019",
-                "reference": "7eb85a9d0fe0f3ed84348432ebea609c957e8019",
+                "url": "https://api.github.com/repos/MohamedKhedr700/core-modules/zipball/6e448d50df820627338bc5b1e8f9c58f4a166a63",
+                "reference": "6e448d50df820627338bc5b1e8f9c58f4a166a63",
                 "shasum": ""
             },
             "require": {
@@ -3999,7 +3999,7 @@
                 "issues": "https://github.com/MohamedKhedr700/core-modules/issues",
                 "source": "https://github.com/MohamedKhedr700/core-modules/tree/main"
             },
-            "time": "2023-10-19T21:48:42+00:00"
+            "time": "2023-10-20T00:40:16+00:00"
         },
         {
             "name": "raid/core-repository",
@@ -4007,12 +4007,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MohamedKhedr700/core-repository.git",
-                "reference": "90b440f075c52002f430f478f127a0eb46e069d6"
+                "reference": "73d66fe6947c8d750be7125420581e13b735cdc5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MohamedKhedr700/core-repository/zipball/90b440f075c52002f430f478f127a0eb46e069d6",
-                "reference": "90b440f075c52002f430f478f127a0eb46e069d6",
+                "url": "https://api.github.com/repos/MohamedKhedr700/core-repository/zipball/73d66fe6947c8d750be7125420581e13b735cdc5",
+                "reference": "73d66fe6947c8d750be7125420581e13b735cdc5",
                 "shasum": ""
             },
             "require": {
@@ -4056,7 +4056,7 @@
                 "issues": "https://github.com/MohamedKhedr700/core-repository/issues",
                 "source": "https://github.com/MohamedKhedr700/core-repository/tree/main"
             },
-            "time": "2023-10-19T20:25:37+00:00"
+            "time": "2023-10-20T00:28:29+00:00"
         },
         {
             "name": "raid/core-request",
@@ -9669,9 +9669,9 @@
         "raid/core-action": 20,
         "raid/core-auth": 20,
         "raid/core-controller": 20,
+        "raid/core-event": 20,
         "raid/core-gate": 20,
         "raid/core-model": 20,
-        "raid/core-modules": 20,
         "raid/core-repository": 20,
         "raid/core-request": 20
     },

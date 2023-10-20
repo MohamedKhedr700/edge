@@ -20,7 +20,7 @@ class UserController extends Controller
     /**
      * Register the user.
      */
-    public function register(RegisterUserRequest $request, RegisterUserAction $registerUserAction): JsonResponse
+    public function register(RegisterUserRequest $request, UserRepository $user, RegisterUserAction $registerUserAction): JsonResponse
     {
         $registerUserAction->authorize();
 

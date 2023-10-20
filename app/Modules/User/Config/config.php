@@ -4,11 +4,17 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Module Name
+    | Module Configurations
     |--------------------------------------------------------------------------
     */
 
-    'name' => '',
+    'name' => 'user',
+
+    'model' => \Modules\User\Models\User::class,
+
+    'transformer' => \Modules\User\Http\Transformers\UserTransformer::class,
+
+    'route_service_provider' => \Modules\User\Providers\RouteServiceProvider::class,
 
     /*
     |--------------------------------------------------------------------------
