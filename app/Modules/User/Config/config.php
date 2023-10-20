@@ -32,8 +32,8 @@ return [
     */
 
     'events' => [
-        \App\Modules\User\Events\LoginUserEvent::class,
-        \App\Modules\User\Events\RegisterUserEvent::class,
+        \Modules\User\Events\LoginUserEvent::class,
+        \Modules\User\Events\RegisterUserEvent::class,
     ],
 
     /*

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Modules\User\Listeners;
+namespace Modules\User\Listeners;
 
-use App\Modules\User\Services\MailService;
+use Modules\User\Services\MailService;
 use Modules\User\Models\User;
 use Raid\Core\Event\Events\Contracts\EventListenerInterface;
 use Raid\Core\Event\Traits\Event\Queueable;

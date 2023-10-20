@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modules\User\Services;
+namespace Modules\User\Services;
 
 use Raid\Core\Auth\Models\Authentication\Contracts\AccountInterface;
 

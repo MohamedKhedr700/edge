@@ -3670,12 +3670,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MohamedKhedr700/core-controller.git",
-                "reference": "97f2d2a422f91c281698e1e6cd9cfdec19c416a7"
+                "reference": "a80735dbc888b7b7a152fb76d05d80060fcba812"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MohamedKhedr700/core-controller/zipball/97f2d2a422f91c281698e1e6cd9cfdec19c416a7",
-                "reference": "97f2d2a422f91c281698e1e6cd9cfdec19c416a7",
+                "url": "https://api.github.com/repos/MohamedKhedr700/core-controller/zipball/a80735dbc888b7b7a152fb76d05d80060fcba812",
+                "reference": "a80735dbc888b7b7a152fb76d05d80060fcba812",
                 "shasum": ""
             },
             "require": {
@@ -3716,7 +3716,7 @@
                 "issues": "https://github.com/MohamedKhedr700/core-controller/issues",
                 "source": "https://github.com/MohamedKhedr700/core-controller/tree/main"
             },
-            "time": "2023-10-20T11:53:27+00:00"
+            "time": "2023-10-20T17:37:09+00:00"
         },
         {
             "name": "raid/core-enum",
@@ -9668,10 +9668,10 @@
     "stability-flags": {
         "raid/core-action": 20,
         "raid/core-auth": 20,
-        "raid/core-controller": 20,
         "raid/core-event": 20,
         "raid/core-gate": 20,
         "raid/core-model": 20,
+        "raid/core-modules": 20,
         "raid/core-repository": 20,
         "raid/core-request": 20
     },

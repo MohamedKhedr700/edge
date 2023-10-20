@@ -2,7 +2,7 @@
 
 namespace Modules\User\Http\Authentication\Steps;
 
-use App\Modules\User\Services\OtpService;
+use Modules\User\Services\OtpService;
 use Exception;
 use Raid\Core\Auth\Authentication\Contracts\AuthChannelInterface;
 use Raid\Core\Auth\Authentication\Contracts\AuthStepInterface;

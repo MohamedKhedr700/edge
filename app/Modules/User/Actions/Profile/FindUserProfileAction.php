@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modules\User\Actions\Profile;
+namespace Modules\User\Actions\Profile;
 
 use Modules\User\Repositories\UserRepository;
 use Raid\Core\Action\Actions\Action;

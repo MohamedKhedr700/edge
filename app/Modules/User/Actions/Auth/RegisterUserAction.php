@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modules\User\Actions\Auth;
+namespace Modules\User\Actions\Auth;
 
 use Exception;
 use Modules\User\Models\User;

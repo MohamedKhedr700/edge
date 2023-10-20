@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Modules\User\Events;
+namespace Modules\User\Events;
 
-use App\Modules\User\Listeners\UpdateLastLoginData;
+use Modules\User\Listeners\UpdateLastLoginData;
 use Raid\Core\Enum\Enums\Action;
 use Raid\Core\Event\Events\Contracts\EventInterface;
 use Raid\Core\Event\Events\Event;

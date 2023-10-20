@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modules\User\Http\Requests;
+namespace Modules\User\Http\Requests;
 
 use Modules\User\Traits\Request\WithUserCommonRules;
 use Raid\Core\Request\Requests\FormRequest;

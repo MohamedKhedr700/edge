@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modules\User\Actions\Auth;
+namespace Modules\User\Actions\Auth;
 
 use Modules\User\Http\Authentication\UserAuthenticator;
 use Modules\User\Repositories\UserRepository;

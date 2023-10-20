@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modules\User\Listeners;
+namespace Modules\User\Listeners;
 
 use Exception;
 use Modules\User\Actions\Crud\UpdateUserAction;
