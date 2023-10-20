@@ -6,5 +6,6 @@ return [
     'attributes' => [
         'title' => 'Title',
         'content' => 'Content',
+        'category_id' => 'Category',
     ],
 ];

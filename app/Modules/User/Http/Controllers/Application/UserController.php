@@ -22,35 +22,4 @@ class UserController extends Controller
      * {@inheritdoc}
      */
     public const TRANSFORMER = UserTransformer::class;
-
-    /**
-     * Register the user.
-     */
-    public function register(RegisterUserRequest $request, UserRepository $user, RegisterUserAction $registerUserAction): JsonResponse
-    {
-        $registerUserAction->authorize();
-
-        $user = $registerUserAction->execute($request->passed());
-
-        return $this->success('User created', [
-            'resource' => $user,
-        ]);
-    }
-
-    /**
-     * Login the user.
-     */
-    public function login(LoginUserRequest $request, LoginUserAction $loginUserAction): JsonResponse
-    {
-        $loginUserAction->authorize();
-
-        $loginChannel = $loginUserAction->execute($request->passed());
-
-        return $this->success('User logged in', [
-            'channel' => $loginChannel->channel(),
-            'token' => $loginChannel->stringToken(),
-            'errors' => $loginChannel->errors(),
-            'resource' => $loginChannel->account(),
-        ]);
-    }
 }

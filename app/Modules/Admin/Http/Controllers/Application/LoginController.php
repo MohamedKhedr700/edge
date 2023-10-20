@@ -30,8 +30,8 @@ class LoginController extends Controller
         return $this->success('', [
             'channel' => $authChannel->channel(),
             'token' => $authChannel->stringToken(),
-            'errors' => $authChannel->errors(),
-            'resource' => $authChannel->account() ? $this->fractalItem($authChannel->account(), $this->getTransformer()) : null,
+            'errors' => $authChannel->errors()->toArray(),
+            'resource' => $this->getTransformedResource($authChannel->account()),
         ]);
     }
 }

@@ -14,18 +14,17 @@ use Modules\Admin\Http\Controllers\Dashboard\AdminController;
 |
 */
 
-Route::group([
-    'prefix' => 'v1/dashboard/admins',
-    //    'middleware' => ['auth:admin']
-], function () {
-    // store admin
-    Route::post('/', [AdminController::class, 'store']);
-    // list admins
-    Route::get('/', [AdminController::class, 'index']);
-    // show admin
-    Route::get('{id}', [AdminController::class, 'show']);
-    // update admin
-    Route::put('{id}', [AdminController::class, 'update']);
-    // delete admin
-    Route::delete('{id}', [AdminController::class, 'delete']);
+Route::prefix('v1/dashboard/admins')
+    ->middleware(['auth:admin'])
+    ->group(function () {
+        // store admin
+        Route::post('/', [AdminController::class, 'store']);
+        // list admins
+        Route::get('/', [AdminController::class, 'index']);
+        // show admin
+        Route::get('{id}', [AdminController::class, 'show']);
+        // update admin
+        Route::put('{id}', [AdminController::class, 'update']);
+        // delete admin
+        Route::delete('{id}', [AdminController::class, 'delete']);
 });

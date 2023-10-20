@@ -1,7 +1,8 @@
 <?php
 
+use App\Modules\User\Http\Controllers\Application\LoginController;
+use App\Modules\User\Http\Controllers\Application\RegisterController;
 use Illuminate\Support\Facades\Route;
-use Modules\User\Http\Controllers\Application\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,7 @@ Route::prefix('v1/users')
 //    ->middleware(['auth:user'])
     ->group(function () {
         // register user
-        Route::post('register', [UserController::class, 'register']);
+        Route::post('register', [RegisterController::class, 'register']);
         // login user
-        Route::post('login', [UserController::class, 'login']);
+        Route::post('login', [LoginController::class, 'login']);
     });

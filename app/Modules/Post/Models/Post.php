@@ -16,7 +16,7 @@ class Post extends Model
      * {@inheritdoc}
      */
     protected $fillable = [
-        'title', 'content',
+        'title', 'content', 'category_id',
     ];
 
     /**

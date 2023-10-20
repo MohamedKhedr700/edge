@@ -33,8 +33,6 @@ class CategoryGate extends Gate implements GateInterface
      */
     public function list(AccountInterface $account): bool
     {
-        dd($account);
-
         return true;
     }
 

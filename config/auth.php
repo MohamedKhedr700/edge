@@ -44,6 +44,10 @@ return [
             'driver' => 'sanctum',
             'provider' => 'users',
         ],
+        'admin' => [
+            'driver' => 'sanctum',
+            'provider' => 'admins',
+        ],
     ],
 
     /*
@@ -67,6 +71,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => \Modules\User\Models\User::class,
+        ],
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => \Modules\Admin\Models\Admin::class,
         ],
 
         // 'users' => [
