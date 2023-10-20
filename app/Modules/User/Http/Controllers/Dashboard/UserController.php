@@ -12,6 +12,7 @@ use Modules\User\Actions\Crud\UpdateUserAction;
 use Modules\User\Http\Requests\ListUserRequest;
 use Modules\User\Http\Requests\StoreUserRequest;
 use Modules\User\Http\Requests\UpdateUserRequest;
+use Modules\User\Http\Transformers\UserTransformer;
 use Modules\User\Models\User;
 use Modules\User\Repositories\UserRepository;
 use Raid\Core\Controller\Controllers\Controller;
@@ -23,6 +24,11 @@ class UserController extends Controller
      * {@inheritdoc}
      */
     public const REPOSITORY = UserRepository::class;
+
+    /**
+     * {@inheritdoc}
+     */
+    public const TRANSFORMER = UserTransformer::class;
 
     /**
      * Store a new resource.

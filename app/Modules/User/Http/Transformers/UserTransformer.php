@@ -16,7 +16,7 @@ class UserTransformer extends Transformer
         return [
             'id' => $user->attribute('id'),
             'phone' => $user->attribute('phone'),
-            'lastLoginAt' => $user->getAttribute('last_login_at')->toIsoString(),
+            'lastLoginAt' => $user->getAttribute('last_login_at')?->toIsoString(),
             'lastLoginIp' => $user->attribute('last_login_ip'),
             'isPremiumSubscribed' => $user->getAttribute('is_premium_subscribed'),
             'isSubscribed' => $user->getAttribute('is_subscribed'),

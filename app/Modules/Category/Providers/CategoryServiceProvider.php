@@ -11,4 +11,9 @@ class CategoryServiceProvider extends ServiceProvider
      * {@inheritdoc}
      */
     public const REPOSITORY = CategoryRepository::class;
+
+    /**
+     * {@inheritdoc}
+     */
+    public const ROUTE_SERVICE_PROVIDER = RouteServiceProvider::class;
 }

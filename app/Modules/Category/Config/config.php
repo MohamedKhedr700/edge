@@ -4,15 +4,11 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Module Configurations
+    | Module Model
     |--------------------------------------------------------------------------
     */
 
     'model' => \Modules\Category\Models\Category::class,
-
-    'transformer' => \Modules\Category\Http\Transformers\CategoryTransformer::class,
-
-    'route_service_provider' => \Modules\Category\Providers\RouteServiceProvider::class,
 
     /*
     |--------------------------------------------------------------------------

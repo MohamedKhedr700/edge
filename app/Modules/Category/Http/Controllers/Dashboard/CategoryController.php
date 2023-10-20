@@ -14,6 +14,7 @@ use Modules\Category\Http\Requests\StoreCategoryRequest;
 use Modules\Category\Http\Requests\UpdateCategoryRequest;
 use Modules\Category\Http\Requests\ListCategoryRequest;
 use Modules\Category\Repositories\CategoryRepository;
+use Modules\Category\Http\Transformers\CategoryTransformer;
 use Modules\Category\Models\Category;
 use Raid\Core\Controller\Controllers\Controller;
 
@@ -23,6 +24,11 @@ class CategoryController extends Controller
      * {@inheritdoc}
      */
     public const REPOSITORY = CategoryRepository::class;
+
+    /**
+     * {@inheritdoc}
+     */
+    public const TRANSFORMER = CategoryTransformer::class;
 
     /**
      * Store a new resource.

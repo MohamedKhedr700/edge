@@ -2,7 +2,7 @@
 
 namespace Modules\Category\Http\Transformers;
 
-use Raid\Core\Repository\Transformers\Transformer;
+use Raid\Core\Controller\Transformers\Transformer;
 use Modules\Category\Models\Category;
 
 class CategoryTransformer extends Transformer
