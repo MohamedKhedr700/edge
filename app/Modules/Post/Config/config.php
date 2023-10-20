@@ -4,11 +4,15 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Module Name
+    | Module Configurations
     |--------------------------------------------------------------------------
     */
 
-    'name' => '',
+    'model' => \Modules\Post\Models\Post::class,
+
+    'transformer' => \Modules\Post\Http\Transformers\PostTransformer::class,
+
+    'route_service_provider' => \Modules\Post\Providers\RouteServiceProvider::class,
 
     /*
     |--------------------------------------------------------------------------

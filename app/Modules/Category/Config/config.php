@@ -8,13 +8,11 @@ return [
     |--------------------------------------------------------------------------
     */
 
-    'name' => 'category',
+    'model' => \Modules\Category\Models\Category::class,
 
-    'model' => Modules\Category\Models\Category::class,
+    'transformer' => \Modules\Category\Http\Transformers\CategoryTransformer::class,
 
-    'transformer' => Modules\Category\Http\Transformers\CategoryTransformer::class,
-
-    'route_service_provider' => Modules\Category\Providers\RouteServiceProvider::class,
+    'route_service_provider' => \Modules\Category\Providers\RouteServiceProvider::class,
 
     /*
     |--------------------------------------------------------------------------
@@ -23,12 +21,12 @@ return [
     */
 
     'actions' => [
-        Modules\Category\Actions\Crud\CreateCategoryAction::class,
-        Modules\Category\Actions\Crud\DeleteCategoryAction::class,
-        Modules\Category\Actions\Crud\FindCategoryAction::class,
-        Modules\Category\Actions\Crud\FindByCategoryAction::class,
-        Modules\Category\Actions\Crud\ListCategoryAction::class,
-        Modules\Category\Actions\Crud\UpdateCategoryAction::class,
+        \Modules\Category\Actions\Crud\CreateCategoryAction::class,
+        \Modules\Category\Actions\Crud\DeleteCategoryAction::class,
+        \Modules\Category\Actions\Crud\FindCategoryAction::class,
+        \Modules\Category\Actions\Crud\FindByCategoryAction::class,
+        \Modules\Category\Actions\Crud\ListCategoryAction::class,
+        \Modules\Category\Actions\Crud\UpdateCategoryAction::class,
     ],
 
     /*
@@ -46,7 +44,7 @@ return [
     */
 
     'gates' => [
-        Modules\Category\Http\Gates\CategoryGate::class,
+        \Modules\Category\Http\Gates\CategoryGate::class,
     ],
 
     /*

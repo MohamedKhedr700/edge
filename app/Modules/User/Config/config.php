@@ -8,8 +8,6 @@ return [
     |--------------------------------------------------------------------------
     */
 
-    'name' => 'user',
-
     'model' => \Modules\User\Models\User::class,
 
     'transformer' => \Modules\User\Http\Transformers\UserTransformer::class,
