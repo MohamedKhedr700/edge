@@ -14,18 +14,17 @@ use Modules\Category\Http\Controllers\Dashboard\CategoryController;
 |
 */
 
-Route::group([
-    'prefix' => 'v1/dashboard/categories',
-//    'middleware' => ['auth:admin']
-], function () {
-    // store category
-    Route::post('/', [CategoryController::class, 'store']);
-    // list categories
-    Route::get('/', [CategoryController::class, 'index']);
-    // show category
-    Route::get('{id}', [CategoryController::class, 'show']);
-    // update category
-    Route::put('{id}', [CategoryController::class, 'update']);
-    // delete category
-    Route::delete('{id}', [CategoryController::class, 'delete']);
+Route::prefix('v1/dashboard/categories')
+//    ->middleware(['auth:admin'])
+    ->group(function () {
+        // store category
+        Route::post('/', [CategoryController::class, 'store']);
+        // list categories
+        Route::get('/', [CategoryController::class, 'index']);
+        // show category
+        Route::get('{id}', [CategoryController::class, 'show']);
+        // update category
+        Route::put('{id}', [CategoryController::class, 'update']);
+        // delete category
+        Route::delete('{id}', [CategoryController::class, 'delete']);
 });

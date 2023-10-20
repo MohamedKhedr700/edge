@@ -35,6 +35,7 @@ return [
 
     'gateables' => [
         \Modules\Post\Repositories\PostRepository::class,
+        \Modules\Category\Repositories\CategoryRepository::class,
     ],
 
     /*

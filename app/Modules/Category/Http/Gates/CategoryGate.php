@@ -29,10 +29,11 @@ class CategoryGate extends Gate implements GateInterface
     }
 
     /**
-     * Determine whether the account can list categorys.
+     * Determine whether the account can list categories.
      */
     public function list(AccountInterface $account): bool
     {
+        dd($account);
         return true;
     }
 

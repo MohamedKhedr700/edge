@@ -14,11 +14,11 @@ use Modules\User\Http\Controllers\Application\UserController;
 |
 */
 
-Route::group([
-    'prefix' => 'v1/users',
-    //    'middleware' => ['auth:device'],
-], function () {
-
-    Route::post('register', [UserController::class, 'register']);
-    Route::post('login', [UserController::class, 'login']);
+Route::prefix('v1/users')
+//    ->middleware(['auth:user'])
+    ->group(function () {
+        // register user
+        Route::post('register', [UserController::class, 'register']);
+        // login user
+        Route::post('login', [UserController::class, 'login']);
 });

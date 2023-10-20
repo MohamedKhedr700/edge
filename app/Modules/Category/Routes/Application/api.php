@@ -15,7 +15,22 @@ use Modules\Category\Http\Controllers\Application\CategoryController;
 */
 
 Route::group([
-    'prefix' => 'v1/categorys',
-    'middleware' => ['auth:device']
+    'prefix' => 'v1/categories',
+    'middleware' => ['auth:user']
 ], function () {
+});
+
+
+Route::prefix('v1')->group(function () {
+    Route::prefix('orders')->middleware(['auth:api'])->group(function () {
+        Route::post('/', 'OrderController@store');
+        Route::put('/', 'OrderController@pay');
+        Route::get('pending', 'OrderController@getOrder');
+        Route::delete('{id}', 'OrderController@delete');
+    });
+
+    Route::prefix('orders')->middleware(['auth:api,admin'])->group(function () {
+        Route::get('/', 'OrderController@index');
+        Route::get('{id}', 'OrderController@show');
+    });
 });

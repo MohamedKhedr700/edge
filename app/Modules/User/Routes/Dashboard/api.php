@@ -14,18 +14,17 @@ use Modules\User\Http\Controllers\Dashboard\UserController;
 |
 */
 
-Route::group([
-    'prefix' => 'v1/dashboard/users',
-    //    'middleware' => ['auth:admin']
-], function () {
-    // store user
-    Route::post('/', [UserController::class, 'store']);
-    // list users
-    Route::get('/', [UserController::class, 'index']);
-    // show user
-    Route::get('{id}', [UserController::class, 'show']);
-    // update user
-    Route::put('{id}', [UserController::class, 'update']);
-    // delete user
-    Route::delete('{id}', [UserController::class, 'delete']);
+Route::prefix('v1/dashboard/users')
+//    ->middleware(['auth:admin'])
+    ->group(function () {
+        // store user
+        Route::post('/', [UserController::class, 'store']);
+        // list users
+        Route::get('/', [UserController::class, 'index']);
+        // show user
+        Route::get('{id}', [UserController::class, 'show']);
+        // update user
+        Route::put('{id}', [UserController::class, 'update']);
+        // delete user
+        Route::delete('{id}', [UserController::class, 'delete']);
 });
