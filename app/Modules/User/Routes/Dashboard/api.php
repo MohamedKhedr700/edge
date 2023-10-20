@@ -15,7 +15,7 @@ use Modules\User\Http\Controllers\Dashboard\UserController;
 */
 
 Route::prefix('v1/dashboard/users')
-//    ->middleware(['auth:admin'])
+    ->middleware(['auth:admin'])
     ->group(function () {
         // store user
         Route::post('/', [UserController::class, 'store']);
