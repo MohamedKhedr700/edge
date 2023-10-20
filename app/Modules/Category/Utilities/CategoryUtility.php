@@ -2,12 +2,12 @@
 
 namespace Modules\Category\Utilities;
 
-use Modules\Category\Http\Transformers\CategoryTransformer;
-use Modules\Category\Models\Category;
-use Modules\Category\Providers\RouteServiceProvider;
-use Modules\Category\Repositories\CategoryRepository;
-use Modules\Category\Utilities\Contracts\CategoryUtilityInterface;
 use Raid\Core\Repository\Utilities\Utility;
+use Modules\Category\Utilities\Contracts\CategoryUtilityInterface;
+use Modules\Category\Models\Category;
+use Modules\Category\Repositories\CategoryRepository;
+use Modules\Category\Http\Transformers\CategoryTransformer;
+use Modules\Category\Providers\RouteServiceProvider;
 
 class CategoryUtility extends Utility implements CategoryUtilityInterface
 {

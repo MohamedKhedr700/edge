@@ -2,8 +2,8 @@
 
 namespace Modules\Category\Http\Gates;
 
-use Modules\Category\Models\Category;
 use Raid\Core\Auth\Models\Authentication\Contracts\AccountInterface;
+use Modules\Category\Models\Category;
 use Raid\Core\Gate\Gates\Contracts\GateInterface;
 use Raid\Core\Gate\Gates\Gate;
 
@@ -29,7 +29,7 @@ class CategoryGate extends Gate implements GateInterface
     }
 
     /**
-     * Determine whether the account can list categories.
+     * Determine whether the account can list categorys.
      */
     public function list(AccountInterface $account): bool
     {

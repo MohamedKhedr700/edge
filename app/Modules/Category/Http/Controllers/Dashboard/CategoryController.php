@@ -2,20 +2,20 @@
 
 namespace Modules\Category\Http\Controllers\Dashboard;
 
-use Illuminate\Auth\Access\AuthorizationException;
-use Illuminate\Http\JsonResponse;
 use Modules\Category\Actions\Crud\CreateCategoryAction;
 use Modules\Category\Actions\Crud\DeleteCategoryAction;
 use Modules\Category\Actions\Crud\FindCategoryAction;
 use Modules\Category\Actions\Crud\ListCategoryAction;
 use Modules\Category\Actions\Crud\UpdateCategoryAction;
-use Modules\Category\Http\Requests\ListCategoryRequest;
+use Raid\Core\Request\Exceptions\UnvalidatedRequestException;
+use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Http\JsonResponse;
 use Modules\Category\Http\Requests\StoreCategoryRequest;
 use Modules\Category\Http\Requests\UpdateCategoryRequest;
-use Modules\Category\Models\Category;
+use Modules\Category\Http\Requests\ListCategoryRequest;
 use Modules\Category\Repositories\CategoryRepository;
+use Modules\Category\Models\Category;
 use Raid\Core\Controller\Controllers\Controller;
-use Raid\Core\Request\Exceptions\UnvalidatedRequestException;
 
 class CategoryController extends Controller
 {
