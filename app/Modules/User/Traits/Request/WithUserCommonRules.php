@@ -12,6 +12,8 @@ trait WithUserCommonRules
     public function commonRules(): array
     {
         return [
+            'email' => ['required', 'string', 'email', 'max:255'],
+            'username' => ['required', 'string', 'min:3', 'max:255'],
             'phone' => ['required', 'string'],
             'password' => ['required', 'string'],
         ];

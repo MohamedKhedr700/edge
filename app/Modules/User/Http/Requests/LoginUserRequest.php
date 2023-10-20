@@ -14,9 +14,11 @@ class LoginUserRequest extends FormRequest
      */
     public function rules(): array
     {
-        return $this->withCommonRules([
-            'phone' => ['required', 'string'],
-            'password' => ['required', 'string'],
-        ]);
+        return [
+            'email' => ['nullable', 'string', 'email', 'max:255'],
+            'phone' => ['nullable', 'string', 'max:255'],
+            'username' => ['nullable', 'string', 'min:3', 'max:255'],
+            'password' => ['nullable', 'string', 'min:6', 'max:255'],
+        ];
     }
 }

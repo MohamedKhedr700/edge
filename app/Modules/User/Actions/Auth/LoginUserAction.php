@@ -29,6 +29,6 @@ class LoginUserAction extends Action implements ActionInterface
      */
     public function handle(array $credentials): AuthChannelInterface
     {
-        return UserAuthenticator::attempt($credentials);
+        return UserAuthenticator::attempt($credentials, 'otp');
     }
 }

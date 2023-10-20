@@ -7,6 +7,7 @@ use Modules\Core\Authentication\Rules\VerifiedPhoneAuthRule;
 use Modules\Core\Authentication\Steps\SendOtpAuthStep;
 use Raid\Core\Auth\Authentication\AuthChannel;
 use Raid\Core\Auth\Authentication\Contracts\AuthChannelInterface;
+use Raid\Core\Auth\Authentication\Workers\EmailAuthWorker;
 use Raid\Core\Auth\Authentication\Workers\PhoneAuthWorker;
 use Raid\Core\Auth\Authentication\Workers\UsernameAuthWorker;
 
@@ -23,6 +24,7 @@ class OtpAuthChannel extends AuthChannel implements AuthChannelInterface
     public function workers(): array
     {
         return [
+            EmailAuthWorker::class,
             PhoneAuthWorker::class,
             UsernameAuthWorker::class,
         ];
@@ -44,7 +46,7 @@ class OtpAuthChannel extends AuthChannel implements AuthChannelInterface
     public function steps(): array
     {
         return [
-            SendOtpAuthStep::class,
+//            SendOtpAuthStep::class,
         ];
     }
 }

@@ -22,6 +22,7 @@ class User extends Account implements AccountInterface
      * {@inheritdoc}
      */
     protected $fillable = [
+        'username', 'email', 'phone', 'password',
         'is_subscribed', 'is_premium_subscribed',
     ];
 
@@ -38,7 +39,7 @@ class User extends Account implements AccountInterface
      */
     public function isSubscribed(): bool
     {
-        return (bool) $this->attribute('is_subscribed', false);
+        return (bool) $this->attribute('is_subscribed', true);
     }
 
     /**
@@ -46,6 +47,14 @@ class User extends Account implements AccountInterface
      */
     public function isPremiumSubscribed(): bool
     {
-        return (bool) $this->attribute('is_premium_subscribed', false);
+        return (bool) $this->attribute('is_premium_subscribed', true);
+    }
+
+    /**
+     * Determine whether the account is verified email.
+     */
+    public function verifiedPhone(): bool
+    {
+        return (bool) $this->attribute('verified_phone', true);
     }
 }
