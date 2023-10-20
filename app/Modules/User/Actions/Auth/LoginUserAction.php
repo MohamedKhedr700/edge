@@ -2,7 +2,6 @@
 
 namespace Modules\User\Actions\Auth;
 
-use Exception;
 use Modules\User\Repositories\UserRepository;
 use Raid\Core\Action\Actions\Action;
 use Raid\Core\Action\Actions\Contracts\ActionInterface;
