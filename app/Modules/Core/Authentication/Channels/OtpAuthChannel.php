@@ -2,13 +2,13 @@
 
 namespace App\Modules\Core\Authentication\Channels;
 
-use App\Modules\Core\Authentication\Rules\VerifiedPhoneRule;
-use App\Modules\Core\Authentication\Steps\SendOtpStep;
-use App\Modules\Core\Authentication\Workers\PhoneWorker;
+use App\Modules\Core\Authentication\Rules\VerifiedPhoneAuthRule;
+use App\Modules\Core\Authentication\Steps\SendOtpAuthStep;
+use App\Modules\Core\Authentication\Workers\PhoneAuthWorker;
 use Raid\Core\Auth\Authentication\AuthChannel;
 use Raid\Core\Auth\Authentication\Contracts\AuthChannelInterface;
 
-class OtpChannel extends AuthChannel implements AuthChannelInterface
+class OtpAuthChannel extends AuthChannel implements AuthChannelInterface
 {
     /**
      * {@inheritdoc}
@@ -21,7 +21,7 @@ class OtpChannel extends AuthChannel implements AuthChannelInterface
     public function workers(): array
     {
         return [
-            PhoneWorker::class,
+            PhoneAuthWorker::class,
         ];
     }
 
@@ -31,7 +31,7 @@ class OtpChannel extends AuthChannel implements AuthChannelInterface
     public function rules(): array
     {
         return [
-            VerifiedPhoneRule::class,
+            VerifiedPhoneAuthRule::class,
         ];
     }
 
@@ -41,7 +41,7 @@ class OtpChannel extends AuthChannel implements AuthChannelInterface
     public function steps(): array
     {
         return [
-            SendOtpStep::class,
+            SendOtpAuthStep::class,
         ];
     }
 }

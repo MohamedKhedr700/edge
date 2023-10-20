@@ -5,7 +5,7 @@ namespace App\Modules\Core\Authentication\Workers;
 use Raid\Core\Auth\Authentication\AuthWorker;
 use Raid\Core\Auth\Authentication\Contracts\AuthWorkerInterface;
 
-class PhoneWorker extends AuthWorker implements AuthWorkerInterface
+class PhoneAuthWorker extends AuthWorker implements AuthWorkerInterface
 {
     /**
      * {@inheritdoc}

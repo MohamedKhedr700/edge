@@ -7,7 +7,7 @@ use Modules\User\Services\OtpService;
 use Raid\Core\Auth\Authentication\Contracts\AuthChannelInterface;
 use Raid\Core\Auth\Authentication\Contracts\AuthStepInterface;
 
-class SendOtpStep implements AuthStepInterface
+class SendOtpAuthStep implements AuthStepInterface
 {
     /**
      * Otp service.

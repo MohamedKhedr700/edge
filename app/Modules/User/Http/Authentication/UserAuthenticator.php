@@ -2,7 +2,7 @@
 
 namespace Modules\User\Http\Authentication;
 
-use App\Modules\Core\Authentication\Channels\OtpChannel;
+use App\Modules\Core\Authentication\Channels\OtpAuthChannel;
 use Modules\User\Repositories\UserRepository;
 use Raid\Core\Auth\Authentication\Authenticator;
 use Raid\Core\Auth\Authentication\Channels\SystemAuthChannel;
@@ -24,7 +24,7 @@ class UserAuthenticator extends Authenticator implements AuthenticatorInterface
      * {@inheritdoc}
      */
     public const CHANNELS = [
-        OtpChannel::class,
+        OtpAuthChannel::class,
         SystemAuthChannel::class,
     ];
 }

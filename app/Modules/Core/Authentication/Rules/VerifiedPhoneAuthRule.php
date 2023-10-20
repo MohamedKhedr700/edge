@@ -5,7 +5,7 @@ namespace App\Modules\Core\Authentication\Rules;
 use Raid\Core\Auth\Authentication\Contracts\AuthChannelInterface;
 use Raid\Core\Auth\Authentication\Contracts\AuthRuleInterface;
 
-class VerifiedPhoneRule implements AuthRuleInterface
+class VerifiedPhoneAuthRule implements AuthRuleInterface
 {
     /**
      * Run an authentication ruler.
