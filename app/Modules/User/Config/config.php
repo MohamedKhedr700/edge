@@ -37,7 +37,10 @@ return [
     |--------------------------------------------------------------------------
     */
 
-    'events' => [],
+    'events' => [
+        \App\Modules\User\Events\LoginUserEvent::class,
+        \App\Modules\User\Events\RegisterUserEvent::class,
+    ],
 
     /*
     |--------------------------------------------------------------------------

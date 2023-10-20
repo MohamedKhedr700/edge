@@ -22,15 +22,4 @@ class UserUtility extends Utility implements UserUtilityInterface
      * {@inheritdoc}
      */
     public const MODULE_UPPER = 'User';
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function getEvents(): array
-    {
-        return [
-            LoginUserEvent::class,
-            RegisterUserEvent::class,
-        ];
-    }
 }
