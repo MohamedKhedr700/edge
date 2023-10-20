@@ -15,12 +15,12 @@ use Modules\Category\Http\Controllers\Dashboard\CategoryController;
 */
 
 Route::group([
-    'prefix' => 'v1/dashboard/categories',
-    //    'middleware' => ['auth:admin']
+    'prefix' => 'v1/dashboard/categorys',
+    'middleware' => ['auth:admin']
 ], function () {
     // store category
     Route::post('/', [CategoryController::class, 'store']);
-    // list categories
+    // list categorys
     Route::get('/', [CategoryController::class, 'index']);
     // show category
     Route::get('{id}', [CategoryController::class, 'show']);

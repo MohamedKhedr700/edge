@@ -2,8 +2,8 @@
 
 namespace Modules\Category\Http\Transformers;
 
-use Modules\Category\Models\Category;
 use Raid\Core\Controller\Transformers\Transformer;
+use Modules\Category\Models\Category;
 
 class CategoryTransformer extends Transformer
 {

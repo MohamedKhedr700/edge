@@ -2,9 +2,9 @@
 
 namespace Modules\Category\Http\Controllers\Application;
 
-use Modules\Category\Http\Transformers\CategoryTransformer;
-use Modules\Category\Repositories\CategoryRepository;
 use Raid\Core\Controller\Controllers\Controller;
+use Modules\Category\Repositories\CategoryRepository;
+use Modules\Category\Http\Transformers\CategoryTransformer;
 
 class CategoryController extends Controller
 {

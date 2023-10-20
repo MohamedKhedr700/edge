@@ -15,7 +15,5 @@ class Category extends Model
     /**
      * {@inheritdoc}
      */
-    protected $fillable = [
-        'name', 'slug', 'description',
-    ];
+    protected $fillable = [];
 }
