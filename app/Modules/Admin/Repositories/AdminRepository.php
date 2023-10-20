@@ -16,4 +16,12 @@ class AdminRepository extends Repository implements AdminRepositoryInterface, Au
      * {@inheritdoc}
      */
     public const UTILITY = AdminUtility::class;
+
+    /**
+     * Get repository authenticator.
+     */
+    public static function getAuthenticator(): string
+    {
+        return static::utility()::getAuthenticator();
+    }
 }
