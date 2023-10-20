@@ -2,6 +2,7 @@
 
 namespace Modules\User\Actions\Auth;
 
+use Modules\Core\Authentication\Channels\OtpAuthChannel;
 use Modules\User\Http\Authentication\Authenticators\UserAuthenticator;
 use Modules\User\Repositories\UserRepository;
 use Raid\Core\Action\Actions\Action;
@@ -29,6 +30,6 @@ class LoginUserAction extends Action implements ActionInterface
      */
     public function handle(array $credentials): AuthChannelInterface
     {
-        return UserAuthenticator::attempt($credentials, 'otp');
+        return UserAuthenticator::attempt($credentials);
     }
 }
