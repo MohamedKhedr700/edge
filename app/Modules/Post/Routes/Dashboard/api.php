@@ -14,18 +14,17 @@ use Modules\Post\Http\Controllers\Dashboard\PostController;
 |
 */
 
-Route::group([
-    'prefix' => 'v1/dashboard/posts',
-    //    'middleware' => ['auth:admin'],
-], function () {
-    // store post
-    Route::post('/', [PostController::class, 'store']);
-    // list posts
-    Route::get('/', [PostController::class, 'index']);
-    // show post
-    Route::get('{id}', [PostController::class, 'show']);
-    // update post
-    Route::put('{id}', [PostController::class, 'update']);
-    // delete post
-    Route::delete('{id}', [PostController::class, 'delete']);
+Route::prefix('v1/dashboard/posts')
+//    ->middleware(['auth:admin'])
+    ->group(function () {
+        // store post
+        Route::post('/', [PostController::class, 'store']);
+        // list posts
+        Route::get('/', [PostController::class, 'index']);
+        // show post
+        Route::get('{id}', [PostController::class, 'show']);
+        // update post
+        Route::put('{id}', [PostController::class, 'update']);
+        // delete post
+        Route::delete('{id}', [PostController::class, 'delete']);
 });
