@@ -2,13 +2,11 @@
 
 namespace Modules\User\Actions\Auth;
 
-use Modules\Core\Authentication\Channels\OtpAuthChannel;
-use Modules\User\Http\Authentication\Authenticators\UserAuthenticator;
+use Exception;
 use Modules\User\Repositories\UserRepository;
 use Raid\Core\Action\Actions\Action;
 use Raid\Core\Action\Actions\Contracts\ActionInterface;
 use Raid\Core\Auth\Authentication\Contracts\AuthChannelInterface;
-use Raid\Core\Auth\Exceptions\Authentication\InvalidChannelException;
 use Raid\Core\Enum\Enums\Action as ActionEnum;
 
 class LoginUserAction extends Action implements ActionInterface
@@ -26,10 +24,10 @@ class LoginUserAction extends Action implements ActionInterface
     /**
      * Handle the action.
      *
-     * @throws InvalidChannelException
+     * @throws Exception
      */
     public function handle(array $credentials): AuthChannelInterface
     {
-        return UserAuthenticator::attempt($credentials);
+        return $this->actionable()->attempt($credentials);
     }
 }

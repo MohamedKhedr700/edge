@@ -16,4 +16,12 @@ class UserRepository extends Repository implements AuthenticatableInterface, Use
      * {@inheritdoc}
      */
     public const UTILITY = UserUtility::class;
+
+    /**
+     * {@inheritdoc}
+     */
+    public static function getAuthenticator(): string
+    {
+        return static::utility()::getAuthenticator();
+    }
 }
