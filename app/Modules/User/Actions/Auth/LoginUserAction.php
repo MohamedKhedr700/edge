@@ -6,6 +6,7 @@ use Exception;
 use Modules\User\Repositories\UserRepository;
 use Raid\Core\Action\Actions\Action;
 use Raid\Core\Action\Actions\Contracts\ActionInterface;
+use Raid\Core\Action\Exceptions\Actionable\InvalidActionableException;
 use Raid\Core\Auth\Authentication\Contracts\AuthChannelInterface;
 use Raid\Core\Enum\Enums\Action as ActionEnum;
 
@@ -24,7 +25,7 @@ class LoginUserAction extends Action implements ActionInterface
     /**
      * Handle the action.
      *
-     * @throws Exception
+     * @throws InvalidActionableException
      */
     public function handle(array $credentials): AuthChannelInterface
     {
