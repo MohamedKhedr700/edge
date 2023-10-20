@@ -2,11 +2,11 @@
 
 namespace Modules\Admin\Repositories;
 
+use Modules\Admin\Repositories\Contracts\AdminRepositoryInterface;
 use Modules\Admin\Utilities\AdminUtility;
 use Raid\Core\Auth\Authentication\Contracts\AuthenticatableInterface;
 use Raid\Core\Auth\Traits\Model\Authenticatable;
 use Raid\Core\Repository\Repositories\Repository;
-use Modules\Admin\Repositories\Contracts\AdminRepositoryInterface;
 
 class AdminRepository extends Repository implements AdminRepositoryInterface, AuthenticatableInterface
 {

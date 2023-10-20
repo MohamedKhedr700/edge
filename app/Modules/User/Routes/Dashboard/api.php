@@ -27,4 +27,4 @@ Route::prefix('v1/dashboard/users')
         Route::put('{id}', [UserController::class, 'update']);
         // delete user
         Route::delete('{id}', [UserController::class, 'delete']);
-});
+    });

@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group([
     'prefix' => 'v1/admins',
-//    'middleware' => ['auth:device']
+    //    'middleware' => ['auth:device']
 ], function () {
     Route::post('login', [LoginController::class, 'login']);
 });

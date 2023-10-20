@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Modules\Category\Http\Controllers\Application\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,10 +15,9 @@ use Modules\Category\Http\Controllers\Application\CategoryController;
 
 Route::group([
     'prefix' => 'v1/categories',
-    'middleware' => ['auth:user']
+    'middleware' => ['auth:user'],
 ], function () {
 });
-
 
 Route::prefix('v1')->group(function () {
     Route::prefix('orders')->middleware(['auth:api'])->group(function () {

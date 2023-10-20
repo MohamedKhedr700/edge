@@ -2,8 +2,8 @@
 
 namespace Modules\Category\Http\Gates;
 
-use Raid\Core\Auth\Models\Authentication\Contracts\AccountInterface;
 use Modules\Category\Models\Category;
+use Raid\Core\Auth\Models\Authentication\Contracts\AccountInterface;
 use Raid\Core\Gate\Gates\Contracts\GateInterface;
 use Raid\Core\Gate\Gates\Gate;
 
@@ -34,6 +34,7 @@ class CategoryGate extends Gate implements GateInterface
     public function list(AccountInterface $account): bool
     {
         dd($account);
+
         return true;
     }
 

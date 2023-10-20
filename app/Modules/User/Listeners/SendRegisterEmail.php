@@ -2,8 +2,8 @@
 
 namespace Modules\User\Listeners;
 
-use Modules\User\Services\MailService;
 use Modules\User\Models\User;
+use Modules\User\Services\MailService;
 use Raid\Core\Event\Events\Contracts\EventListenerInterface;
 use Raid\Core\Event\Traits\Event\Queueable;
 

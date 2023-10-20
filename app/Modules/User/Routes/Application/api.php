@@ -21,4 +21,4 @@ Route::prefix('v1/users')
         Route::post('register', [UserController::class, 'register']);
         // login user
         Route::post('login', [UserController::class, 'login']);
-});
+    });

@@ -13,4 +13,3 @@ class AdminService extends ActionService implements ActionServiceInterface
      */
     public const REPOSITORY = AdminRepository::class;
 }
-

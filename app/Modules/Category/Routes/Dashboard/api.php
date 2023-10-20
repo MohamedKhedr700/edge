@@ -27,4 +27,4 @@ Route::prefix('v1/dashboard/categories')
         Route::put('{id}', [CategoryController::class, 'update']);
         // delete category
         Route::delete('{id}', [CategoryController::class, 'delete']);
-});
+    });

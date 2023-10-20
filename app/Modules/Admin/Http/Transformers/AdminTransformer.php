@@ -2,8 +2,8 @@
 
 namespace Modules\Admin\Http\Transformers;
 
-use Raid\Core\Controller\Transformers\Transformer;
 use Modules\Admin\Models\Admin;
+use Raid\Core\Controller\Transformers\Transformer;
 
 class AdminTransformer extends Transformer
 {

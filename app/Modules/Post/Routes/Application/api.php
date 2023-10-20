@@ -27,4 +27,4 @@ Route::prefix('v1/posts')
         Route::put('{id}', [PostController::class, 'update']);
         // delete post
         Route::delete('{id}', [PostController::class, 'delete']);
-});
+    });

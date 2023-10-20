@@ -2,9 +2,9 @@
 
 namespace Modules\Admin\Http\Controllers\Application;
 
-use Raid\Core\Controller\Controllers\Controller;
-use Modules\Admin\Repositories\AdminRepository;
 use Modules\Admin\Http\Transformers\AdminTransformer;
+use Modules\Admin\Repositories\AdminRepository;
+use Raid\Core\Controller\Controllers\Controller;
 
 class AdminController extends Controller
 {
