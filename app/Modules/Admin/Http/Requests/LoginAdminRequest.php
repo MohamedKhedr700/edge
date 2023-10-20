@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modules\Admin\Http\Requests;
+namespace Modules\Admin\Http\Requests;
 
 use Modules\Admin\Traits\Request\WithAdminCommonRules;
 use Raid\Core\Request\Requests\FormRequest;

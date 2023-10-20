@@ -1,7 +1,7 @@
 <?php
 
-use App\Modules\Admin\Http\Controllers\Application\LoginController;
 use Illuminate\Support\Facades\Route;
+use Modules\Admin\Http\Controllers\Application\LoginController;
 
 /*
 |--------------------------------------------------------------------------

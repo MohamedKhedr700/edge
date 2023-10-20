@@ -1,19 +1,21 @@
 <?php
 
-namespace App\Modules\Core\Authentication\Channels;
+namespace Modules\Core\Authentication\Channels;
 
-use App\Modules\Core\Authentication\Rules\VerifiedPhoneAuthRule;
-use App\Modules\Core\Authentication\Steps\SendOtpAuthStep;
-use App\Modules\Core\Authentication\Workers\PhoneAuthWorker;
+use App\Modules\Core\Authentication\Enums\Channel;
+use Modules\Core\Authentication\Rules\VerifiedPhoneAuthRule;
+use Modules\Core\Authentication\Steps\SendOtpAuthStep;
 use Raid\Core\Auth\Authentication\AuthChannel;
 use Raid\Core\Auth\Authentication\Contracts\AuthChannelInterface;
+use Raid\Core\Auth\Authentication\Workers\PhoneAuthWorker;
+use Raid\Core\Auth\Authentication\Workers\UsernameAuthWorker;
 
 class OtpAuthChannel extends AuthChannel implements AuthChannelInterface
 {
     /**
      * {@inheritdoc}
      */
-    public const CHANNEL = 'otp';
+    public const CHANNEL = Channel::OTP;
 
     /**
      * Get authentication workers.
@@ -22,6 +24,7 @@ class OtpAuthChannel extends AuthChannel implements AuthChannelInterface
     {
         return [
             PhoneAuthWorker::class,
+            UsernameAuthWorker::class,
         ];
     }
 

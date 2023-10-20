@@ -27,4 +27,4 @@ Route::prefix('v1/dashboard/admins')
         Route::put('{id}', [AdminController::class, 'update']);
         // delete admin
         Route::delete('{id}', [AdminController::class, 'delete']);
-});
+    });

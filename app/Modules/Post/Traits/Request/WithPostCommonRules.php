@@ -14,7 +14,7 @@ trait WithPostCommonRules
         return [
             'title' => ['required', 'string', 'max:255'],
             'content' => ['required', 'string', 'max:65535'],
-            'category_id' => ['required', 'string', 'exists:categories,id']
+            'category_id' => ['required', 'string', 'exists:categories,id'],
         ];
     }
 

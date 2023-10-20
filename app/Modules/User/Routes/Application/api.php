@@ -1,8 +1,8 @@
 <?php
 
-use App\Modules\User\Http\Controllers\Application\LoginController;
-use App\Modules\User\Http\Controllers\Application\RegisterController;
 use Illuminate\Support\Facades\Route;
+use Modules\User\Http\Controllers\Application\LoginController;
+use Modules\User\Http\Controllers\Application\RegisterController;
 
 /*
 |--------------------------------------------------------------------------

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Modules\Admin\Http\Controllers\Application;
+namespace Modules\Admin\Http\Controllers\Application;
 
-use App\Modules\Admin\Actions\Auth\LoginAdminAction;
-use App\Modules\Admin\Http\Requests\LoginAdminRequest;
+use Modules\Admin\Actions\Auth\LoginAdminAction;
+use Modules\Admin\Http\Requests\LoginAdminRequest;
 use Modules\Admin\Http\Transformers\AdminTransformer;
 use Modules\Admin\Repositories\AdminRepository;
 use Raid\Core\Controller\Controllers\Controller;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modules\Core\Authentication\Steps;
+namespace Modules\Core\Authentication\Steps;
 
 use Exception;
 use Modules\User\Services\OtpService;

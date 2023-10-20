@@ -2,7 +2,7 @@
 
 namespace Modules\User\Actions\Auth;
 
-use Modules\User\Http\Authentication\UserAuthenticator;
+use Modules\User\Http\Authentication\Authenticators\UserAuthenticator;
 use Modules\User\Repositories\UserRepository;
 use Raid\Core\Action\Actions\Action;
 use Raid\Core\Action\Actions\Contracts\ActionInterface;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modules\User\Http\Controllers\Application;
+namespace Modules\User\Http\Controllers\Application;
 
 use Illuminate\Http\JsonResponse;
 use Modules\User\Actions\Auth\LoginUserAction;

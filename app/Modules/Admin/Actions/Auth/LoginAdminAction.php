@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Modules\Admin\Actions\Auth;
+namespace Modules\Admin\Actions\Auth;
 
-use App\Modules\Admin\Http\Authentication\AdminAuthenticator;
+use Modules\Admin\Http\Authentication\Authenticators\AdminAuthenticator;
 use Modules\Admin\Repositories\AdminRepository;
 use Raid\Core\Action\Actions\Action;
 use Raid\Core\Action\Actions\Contracts\ActionInterface;
