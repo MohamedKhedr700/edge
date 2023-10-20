@@ -2,7 +2,6 @@
 
 namespace Modules\Post\Models;
 
-use Illuminate\Support\Facades\Auth;
 use Modules\Post\Models\ModelFilter\PostFilter;
 use Raid\Core\Model\Models\Model;
 

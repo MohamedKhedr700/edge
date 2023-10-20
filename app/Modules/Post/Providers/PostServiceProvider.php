@@ -11,4 +11,9 @@ class PostServiceProvider extends ServiceProvider
      * {@inheritdoc}
      */
     public const REPOSITORY = PostRepository::class;
+
+    /**
+     * {@inheritdoc}
+     */
+    public const ROUTE_SERVICE_PROVIDER = RouteServiceProvider::class;
 }

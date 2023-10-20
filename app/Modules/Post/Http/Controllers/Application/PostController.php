@@ -12,6 +12,7 @@ use Modules\Post\Actions\Crud\UpdatePostAction;
 use Modules\Post\Http\Requests\ListPostRequest;
 use Modules\Post\Http\Requests\StorePostRequest;
 use Modules\Post\Http\Requests\UpdatePostRequest;
+use Modules\Post\Http\Transformers\PostTransformer;
 use Modules\Post\Models\Post;
 use Modules\Post\Repositories\PostRepository;
 use Raid\Core\Controller\Controllers\Controller;
@@ -23,6 +24,11 @@ class PostController extends Controller
      * {@inheritdoc}
      */
     public const REPOSITORY = PostRepository::class;
+
+    /**
+     * {@inheritdoc}
+     */
+    public const TRANSFORMER = PostTransformer::class;
 
     /**
      * Store a new resource.

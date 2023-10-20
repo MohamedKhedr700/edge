@@ -11,4 +11,9 @@ class UserServiceProvider extends ServiceProvider
      * {@inheritdoc}
      */
     public const REPOSITORY = UserRepository::class;
+
+    /**
+     * {@inheritdoc}
+     */
+    public const ROUTE_SERVICE_PROVIDER = RouteServiceProvider::class;
 }

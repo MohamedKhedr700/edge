@@ -2,8 +2,8 @@
 
 namespace Modules\Category\Http\Gates;
 
-use Raid\Core\Auth\Models\Authentication\Contracts\AccountInterface;
 use Modules\Category\Models\Category;
+use Raid\Core\Auth\Models\Authentication\Contracts\AccountInterface;
 use Raid\Core\Gate\Gates\Contracts\GateInterface;
 use Raid\Core\Gate\Gates\Gate;
 

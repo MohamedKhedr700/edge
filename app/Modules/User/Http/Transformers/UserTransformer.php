@@ -2,9 +2,8 @@
 
 namespace Modules\User\Http\Transformers;
 
-use Illuminate\Support\Carbon;
 use Modules\User\Models\User;
-use Raid\Core\Repository\Transformers\Transformer;
+use Raid\Core\Controller\Transformers\Transformer;
 
 class UserTransformer extends Transformer
 {
