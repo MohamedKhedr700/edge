@@ -2,7 +2,7 @@
 
 namespace Modules\User\Http\Authentication;
 
-use Modules\User\Http\Authentication\Channels\OtpChannel;
+use App\Modules\Core\Authentication\Channels\OtpChannel;
 use Modules\User\Repositories\UserRepository;
 use Raid\Core\Auth\Authentication\Authenticator;
 use Raid\Core\Auth\Authentication\Channels\SystemAuthChannel;

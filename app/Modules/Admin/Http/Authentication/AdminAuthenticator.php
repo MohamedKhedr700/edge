@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Admin\Http\Authentication\Authenticators;
+namespace App\Modules\Admin\Http\Authentication;
 
 use Modules\Admin\Repositories\AdminRepository;
 use Raid\Core\Auth\Authentication\Authenticator;

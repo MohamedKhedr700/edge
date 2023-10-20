@@ -1,10 +1,10 @@
 <?php
 
-namespace Modules\User\Http\Authentication\Channels;
+namespace App\Modules\Core\Authentication\Channels;
 
-use Modules\User\Http\Authentication\Rules\VerifiedPhoneRule;
-use Modules\User\Http\Authentication\Steps\SendOtpStep;
-use Modules\User\Http\Authentication\Workers\PhoneWorker;
+use App\Modules\Core\Authentication\Rules\VerifiedPhoneRule;
+use App\Modules\Core\Authentication\Steps\SendOtpStep;
+use App\Modules\Core\Authentication\Workers\PhoneWorker;
 use Raid\Core\Auth\Authentication\AuthChannel;
 use Raid\Core\Auth\Authentication\Contracts\AuthChannelInterface;
 

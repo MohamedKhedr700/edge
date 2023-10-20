@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\User\Http\Authentication\Workers;
+namespace App\Modules\Core\Authentication\Workers;
 
 use Raid\Core\Auth\Authentication\AuthWorker;
 use Raid\Core\Auth\Authentication\Contracts\AuthWorkerInterface;

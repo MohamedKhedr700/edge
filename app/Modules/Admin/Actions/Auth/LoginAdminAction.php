@@ -2,7 +2,7 @@
 
 namespace App\Modules\Admin\Actions\Auth;
 
-use Modules\Admin\Http\Authentication\Authenticators\AdminAuthenticator;
+use App\Modules\Admin\Http\Authentication\AdminAuthenticator;
 use Modules\Admin\Repositories\AdminRepository;
 use Raid\Core\Action\Actions\Action;
 use Raid\Core\Action\Actions\Contracts\ActionInterface;
