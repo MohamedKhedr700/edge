@@ -3,7 +3,7 @@
 namespace Modules\Category\Http\Transformers;
 
 use Modules\Category\Models\Category;
-use Raid\Core\Controller\Transformers\Transformer;
+use Raid\Core\Repository\Transformers\Transformer;
 
 class CategoryTransformer extends Transformer
 {

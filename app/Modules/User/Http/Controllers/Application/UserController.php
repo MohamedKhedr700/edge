@@ -12,9 +12,4 @@ class UserController extends Controller
      * {@inheritdoc}
      */
     public const REPOSITORY = UserRepository::class;
-
-    /**
-     * {@inheritdoc}
-     */
-    public const TRANSFORMER = UserTransformer::class;
 }

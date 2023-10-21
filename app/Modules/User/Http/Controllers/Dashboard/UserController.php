@@ -26,11 +26,6 @@ class UserController extends Controller
     public const REPOSITORY = UserRepository::class;
 
     /**
-     * {@inheritdoc}
-     */
-    public const TRANSFORMER = UserTransformer::class;
-
-    /**
      * Store a new resource.
      *
      * @throws AuthorizationException|UnvalidatedRequestException

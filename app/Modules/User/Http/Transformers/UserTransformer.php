@@ -3,7 +3,7 @@
 namespace Modules\User\Http\Transformers;
 
 use Modules\User\Models\User;
-use Raid\Core\Controller\Transformers\Transformer;
+use Raid\Core\Repository\Transformers\Transformer;
 
 class UserTransformer extends Transformer
 {

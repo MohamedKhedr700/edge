@@ -3,7 +3,7 @@
 namespace Modules\Admin\Http\Transformers;
 
 use Modules\Admin\Models\Admin;
-use Raid\Core\Controller\Transformers\Transformer;
+use Raid\Core\Repository\Transformers\Transformer;
 
 class AdminTransformer extends Transformer
 {
