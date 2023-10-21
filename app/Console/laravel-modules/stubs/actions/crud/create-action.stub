@@ -1,0 +1,15 @@
+<?php
+
+namespace $MODULE_NAMESPACE$\$STUDLY_NAME$\Actions\Crud;
+
+use $MODULE_NAMESPACE$\$STUDLY_NAME$\Repositories\$STUDLY_NAME$Repository;
+use Raid\Core\Action\Actions\Contracts\Crud\CreateActionInterface;
+use Raid\Core\Action\Actions\Crud\CreateAction;
+
+class Create$STUDLY_NAME$Action extends CreateAction implements CreateActionInterface
+{
+    /**
+     * {@inheritDoc}
+     */
+    public const ACTIONABLE = $STUDLY_NAME$Repository::class;
+}

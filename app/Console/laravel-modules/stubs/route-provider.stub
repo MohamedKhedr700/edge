@@ -1,0 +1,14 @@
+<?php
+
+namespace $NAMESPACE$;
+
+use $MODULE_NAMESPACE$\$MODULE$\Utilities\$MODULE$Utility;
+use Raid\Core\Modules\Providers\RouteServiceProvider as RaidRouteServiceProvider;
+
+class RouteServiceProvider extends RaidRouteServiceProvider
+{
+    /**
+     * @inheritdoc
+     */
+    public const MODULE = $MODULE$Utility::MODULE_UPPER;
+}

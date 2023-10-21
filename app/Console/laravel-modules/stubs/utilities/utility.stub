@@ -1,0 +1,19 @@
+<?php
+
+namespace $MODULE_NAMESPACE$\$STUDLY_NAME$\Utilities;
+
+use $MODULE_NAMESPACE$\$STUDLY_NAME$\Utilities\Contracts\$STUDLY_NAME$UtilityInterface;
+use Raid\Core\Repository\Utilities\Utility;
+
+class $STUDLY_NAME$Utility extends Utility implements $STUDLY_NAME$UtilityInterface
+{
+    /**
+     * {@inheritdoc}
+     */
+    public const MODULE_LOWER = '$LOWER_NAME$';
+
+    /**
+     * {@inheritdoc}
+     */
+    public const MODULE_UPPER = '$STUDLY_NAME$';
+}

@@ -1,0 +1,19 @@
+<?php
+
+namespace $NAMESPACE$;
+
+use $MODULE_NAMESPACE$\$STUDLY_NAME$\Repositories\$STUDLY_NAME$Repository;
+use Raid\Core\Modules\Providers\ServiceProvider;
+
+class $CLASS$ extends ServiceProvider
+{
+    /**
+     * {@inheritdoc}
+     */
+    public const REPOSITORY = $STUDLY_NAME$Repository::class;
+
+    /**
+     * {@inheritdoc}
+     */
+    public const ROUTE_SERVICE_PROVIDER = RouteServiceProvider::class;
+}
