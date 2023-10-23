@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'test' => 'test',
 
+    'model' => \App\Models\User::class,
 ];

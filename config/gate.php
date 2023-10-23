@@ -34,7 +34,7 @@ return [
     */
 
     'gateables' => [
-        \App\Repositories\UserRepository::class,
+        //        \App\Repositories\UserRepository::class,
     ],
 
     /*

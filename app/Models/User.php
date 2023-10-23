@@ -3,11 +3,18 @@
 namespace App\Models;
 
 use App\Models\ModelFilters\UserFilter;
+use Raid\Core\Action\Traits\Action\Actionable;
 use Raid\Core\Auth\Models\Authentication\Account;
 use Raid\Core\Auth\Models\Authentication\Contracts\AccountInterface;
+use Raid\Core\Event\Traits\Event\Eventable;
+use Raid\Core\Gate\Traits\Gate\Gateable;
 
 class User extends Account implements AccountInterface
 {
+    use Actionable;
+    use Eventable;
+    use Gateable;
+
     /**
      * {@inheritdoc}
      */
