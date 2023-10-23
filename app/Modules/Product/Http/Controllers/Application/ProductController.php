@@ -2,8 +2,8 @@
 
 namespace Modules\Product\Http\Controllers\Application;
 
-use Raid\Core\Controller\Controllers\Controller;
 use Modules\Product\Repositories\ProductRepository;
+use Raid\Core\Controller\Controllers\Controller;
 
 class ProductController extends Controller
 {

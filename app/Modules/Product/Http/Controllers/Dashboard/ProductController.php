@@ -2,20 +2,20 @@
 
 namespace Modules\Product\Http\Controllers\Dashboard;
 
+use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Http\JsonResponse;
 use Modules\Product\Actions\Crud\CreateProductAction;
 use Modules\Product\Actions\Crud\DeleteProductAction;
 use Modules\Product\Actions\Crud\FindProductAction;
 use Modules\Product\Actions\Crud\ListProductAction;
 use Modules\Product\Actions\Crud\UpdateProductAction;
-use Raid\Core\Request\Exceptions\UnvalidatedRequestException;
-use Illuminate\Auth\Access\AuthorizationException;
-use Illuminate\Http\JsonResponse;
+use Modules\Product\Http\Requests\ListProductRequest;
 use Modules\Product\Http\Requests\StoreProductRequest;
 use Modules\Product\Http\Requests\UpdateProductRequest;
-use Modules\Product\Http\Requests\ListProductRequest;
-use Modules\Product\Repositories\ProductRepository;
 use Modules\Product\Models\Product;
+use Modules\Product\Repositories\ProductRepository;
 use Raid\Core\Controller\Controllers\Controller;
+use Raid\Core\Request\Exceptions\UnvalidatedRequestException;
 
 class ProductController extends Controller
 {

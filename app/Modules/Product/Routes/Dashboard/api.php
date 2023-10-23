@@ -27,4 +27,4 @@ Route::prefix('v1/dashboard/products')
         Route::put('{id}', [ProductController::class, 'update']);
         // delete product
         Route::delete('{id}', [ProductController::class, 'delete']);
-});
+    });

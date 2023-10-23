@@ -10,7 +10,6 @@ return [
 
     'model' => \Modules\Product\Models\Product::class,
 
-
     /*
     |--------------------------------------------------------------------------
     | Module Transformer

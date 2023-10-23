@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Modules\Product\Http\Controllers\Application\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +17,4 @@ Route::prefix('v1/products')
     ->middleware(['auth:user'])
     ->group(function () {
 
-});
+    });

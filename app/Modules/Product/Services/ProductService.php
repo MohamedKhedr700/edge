@@ -13,4 +13,3 @@ class ProductService extends ActionService implements ActionServiceInterface
      */
     public const REPOSITORY = ProductRepository::class;
 }
-

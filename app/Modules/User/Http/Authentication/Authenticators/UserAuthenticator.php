@@ -24,7 +24,7 @@ class UserAuthenticator extends Authenticator implements AuthenticatorInterface
     /**
      * {@inheritdoc}
      */
-    public const DEFAULT_CHANNEL = OtpAuthChannel::class;
+    public const DEFAULT_CHANNEL = SystemAuthChannel::class;
 
     /**
      * {@inheritdoc}

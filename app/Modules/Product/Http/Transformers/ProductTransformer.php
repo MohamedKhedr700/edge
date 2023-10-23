@@ -2,8 +2,8 @@
 
 namespace Modules\Product\Http\Transformers;
 
-use Raid\Core\Repository\Transformers\Transformer;
 use Modules\Product\Models\Product;
+use Raid\Core\Repository\Transformers\Transformer;
 
 class ProductTransformer extends Transformer
 {
