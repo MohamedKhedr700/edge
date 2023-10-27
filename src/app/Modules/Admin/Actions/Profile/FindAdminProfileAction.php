@@ -25,6 +25,7 @@ class FindAdminProfileAction extends Action implements ActionInterface
      */
     public function handle(): AccountInterface
     {
+
         return account();
     }
 }
