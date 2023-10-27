@@ -14,6 +14,6 @@ class EmbedPostAuthor implements EventListenerInterface
     {
         dd($post);
 
-//        $post->author()->associate($post->attribute('category_id'));
+        //        $post->author()->associate($post->attribute('category_id'));
     }
 }

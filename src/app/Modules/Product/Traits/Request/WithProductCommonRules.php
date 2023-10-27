@@ -2,6 +2,8 @@
 
 namespace Modules\Product\Traits\Request;
 
+use Modules\Product\Utilities\ProductUtility;
+
 trait WithProductCommonRules
 {
     /**
@@ -9,7 +11,10 @@ trait WithProductCommonRules
      */
     public function commonRules(): array
     {
-        return [];
+        return [
+            'name' => ['required', 'string', 'max:255'],
+            'description' => ['nullable', 'string', 'max:65535'],
+        ];
     }
 
     /**
@@ -17,6 +22,9 @@ trait WithProductCommonRules
      */
     public function attributes(): array
     {
-        return [];
+        return [
+            'name' => ProductUtility::trans('product.attributes.name'),
+            'description' => ProductUtility::trans('product.attributes.description'),
+        ];
     }
 }

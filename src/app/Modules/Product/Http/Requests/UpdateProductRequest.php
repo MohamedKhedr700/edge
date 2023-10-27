@@ -14,6 +14,8 @@ class UpdateProductRequest extends FormRequest
      */
     public function rules(): array
     {
-        return $this->withCommonRules();
+        return $this->withCommonRules([
+            'name' => ['sometimes'],
+        ]);
     }
 }

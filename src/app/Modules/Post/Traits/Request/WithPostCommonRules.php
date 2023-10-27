@@ -15,6 +15,8 @@ trait WithPostCommonRules
             'title' => ['required', 'string', 'max:255'],
             'content' => ['required', 'string', 'max:65535'],
             'categoryId' => ['required', 'string', 'exists:categories,id'],
+            'productIds' => ['nullable', 'array'],
+            'productIds.*' => ['required_with:productIds', 'string', 'exists:products,id'],
         ];
     }
 
@@ -27,6 +29,8 @@ trait WithPostCommonRules
             'title' => PostUtility::trans('post.attributes.title'),
             'content' => PostUtility::trans('post.attributes.content'),
             'categoryId' => PostUtility::trans('post.attributes.category_id'),
+            'productIds' => PostUtility::trans('post.attributes.product_ids'),
+            'productIds.*' => PostUtility::trans('post.attributes.product_ids'),
         ];
     }
 }

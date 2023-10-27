@@ -5,7 +5,7 @@ namespace App\Modules\Post\Listeners;
 use Modules\Post\Models\Post;
 use Raid\Core\Event\Events\Contracts\EventListenerInterface;
 
-class EmbedPostCategory implements EventListenerInterface
+class EmbedPostProducts implements EventListenerInterface
 {
     /**
      * Handle the event listener.
@@ -14,6 +14,6 @@ class EmbedPostCategory implements EventListenerInterface
     {
         dd($post);
 
-        //        $post->category()->associate($post->attribute('category_id'));
+        //        $post->products()->create($post->attribute('product_ids'));
     }
 }
