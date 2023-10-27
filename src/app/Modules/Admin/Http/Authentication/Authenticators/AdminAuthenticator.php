@@ -3,7 +3,7 @@
 namespace Modules\Admin\Http\Authentication\Authenticators;
 
 use Modules\Admin\Repositories\AdminRepository;
-use Modules\Core\Authentication\Enums\Authenticator as AuthenticatorEnum;
+use Modules\Core\Http\Authentication\Enums\Authenticator as AuthenticatorEnum;
 use Raid\Core\Auth\Authentication\Authenticator;
 use Raid\Core\Auth\Authentication\Channels\SystemAuthChannel;
 use Raid\Core\Auth\Authentication\Contracts\AuthenticatorInterface;

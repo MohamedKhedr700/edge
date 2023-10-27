@@ -40,7 +40,7 @@ return [
     */
 
     'events' => [
-        \App\Modules\Post\Events\CreatePostEvent::class,
+        \Modules\Post\Events\CreatePostEvent::class,
     ],
 
     /*

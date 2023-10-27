@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Core\Authentication\Enums;
+namespace Modules\Core\Http\Authentication\Enums;
 
 use Raid\Core\Enum\Enums\Enum;
 

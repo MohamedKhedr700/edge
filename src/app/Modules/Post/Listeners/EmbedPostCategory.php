@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modules\Post\Listeners;
+namespace Modules\Post\Listeners;
 
 use Modules\Post\Models\Post;
 use Raid\Core\Event\Events\Contracts\EventListenerInterface;

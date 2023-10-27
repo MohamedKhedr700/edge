@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modules\Core\Authentication\Enums;
+namespace Modules\Core\Http\Authentication\Enums;
 
 use Raid\Core\Auth\Models\Authentication\Enums\Channel as RaidChannel;
 

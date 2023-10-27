@@ -32,6 +32,7 @@ class PostTransformer extends Transformer
     public function includeAuthor(Post $post)
     {
         dd($post);
+
         return $this->item($post->author, new UserTransformer);
     }
 
@@ -41,6 +42,7 @@ class PostTransformer extends Transformer
     public function includeCategory(Post $post)
     {
         dd($post);
+
         return $this->item($post->category, new CategoryTransformer);
     }
 
@@ -50,6 +52,7 @@ class PostTransformer extends Transformer
     public function includeProducts(Post $post)
     {
         dd($post);
+
         return $this->collection($post->products, new ProductTransformer);
     }
 }
