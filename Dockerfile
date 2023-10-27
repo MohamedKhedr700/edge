@@ -23,13 +23,6 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     libgd-dev
 
-#Mongo
-RUN apt-get update && \
-    apt-get install -y autoconf pkg-config libssl-dev git unzip libzip-dev zlib1g-dev && \
-    pecl install mongodb && docker-php-ext-enable mongodb && \
-    pecl install xdebug && docker-php-ext-enable xdebug && \
-    docker-php-ext-install -j$(nproc) zip
-
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
@@ -37,6 +30,13 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN docker-php-ext-install pdo_mysql mbstring zip exif pcntl
 RUN docker-php-ext-configure gd --with-external-gd
 RUN docker-php-ext-install gd
+
+#Install mongodb
+RUN apt-get update && \
+    apt-get install -y autoconf pkg-config libssl-dev git unzip libzip-dev zlib1g-dev && \
+    pecl install mongodb && docker-php-ext-enable mongodb && \
+    pecl install xdebug && docker-php-ext-enable xdebug && \
+    docker-php-ext-install -j$(nproc) zip
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
