@@ -1,5 +1,7 @@
 FROM php:8.2-fpm
 
+# Copy composer.lock and composer.json
+COPY src/composer.lock src/composer.json /var/www/html/
 
 # Set working directory
 WORKDIR /var/www/html
@@ -35,6 +37,7 @@ RUN apt-get update && \
     pecl install mongodb && docker-php-ext-enable mongodb && \
     pecl install xdebug && docker-php-ext-enable xdebug && \
     docker-php-ext-install -j$(nproc) zip
+
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
