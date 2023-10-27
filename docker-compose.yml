@@ -1,7 +1,7 @@
 version: '3.7'
 
 networks:
-  laravel:
+  local:
 
 services:
   php:
@@ -17,7 +17,7 @@ services:
     depends_on:
       - mongodb
     networks:
-      - laravel
+      - local
 
   nginx:
     container_name: nginx
@@ -30,7 +30,7 @@ services:
     depends_on:
       - php
     networks:
-      - laravel
+      - local
 
   mongodb:
     container_name: mongodb
@@ -40,4 +40,4 @@ services:
     volumes:
       - ./docker/mongodb/db:/data/db
     networks:
-      - laravel
+      - local

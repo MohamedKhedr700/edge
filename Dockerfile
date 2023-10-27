@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     libonig-dev \
     libzip-dev \
-    libgd-dev \
+    libgd-dev
 
 #Mongo
 RUN apt-get update && \
@@ -29,8 +29,6 @@ RUN apt-get update && \
     pecl install mongodb && docker-php-ext-enable mongodb && \
     pecl install xdebug && docker-php-ext-enable xdebug && \
     docker-php-ext-install -j$(nproc) zip
-
-#Mine
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
@@ -58,7 +56,4 @@ USER www
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
-
-EXPOSE 27017
-
 CMD ["php-fpm"]

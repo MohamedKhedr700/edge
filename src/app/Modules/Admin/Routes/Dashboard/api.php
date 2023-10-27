@@ -15,7 +15,7 @@ use Modules\Admin\Http\Controllers\Dashboard\AdminController;
 */
 
 Route::prefix('v1/dashboard/admins')
-    ->middleware(['auth:admin'])
+//    ->middleware(['auth:admin'])
     ->group(function () {
         // store admin
         Route::post('/', [AdminController::class, 'store']);
