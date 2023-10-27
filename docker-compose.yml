@@ -35,6 +35,7 @@ services:
   mongodb:
     container_name: mongodb
     image: mongo:latest
+    restart: on-failure
     ports:
       - "27017:27017"
     volumes:
