@@ -2,6 +2,8 @@
 
 namespace Modules\Category\Traits\Request;
 
+use Modules\Category\Utilities\CategoryUtility;
+
 trait WithCategoryCommonRules
 {
     /**
@@ -9,7 +11,10 @@ trait WithCategoryCommonRules
      */
     public function commonRules(): array
     {
-        return [];
+        return [
+            'name' => ['required', 'string', 'max:255'],
+            'description' => ['nullable', 'string', 'max:65535'],
+        ];
     }
 
     /**
@@ -17,6 +22,9 @@ trait WithCategoryCommonRules
      */
     public function attributes(): array
     {
-        return [];
+        return [
+            'name' => CategoryUtility::trans('category.attributes.name'),
+            'description' => CategoryUtility::trans('category.attributes.description'),
+        ];
     }
 }

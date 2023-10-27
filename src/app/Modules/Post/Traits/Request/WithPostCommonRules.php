@@ -14,7 +14,7 @@ trait WithPostCommonRules
         return [
             'title' => ['required', 'string', 'max:255'],
             'content' => ['required', 'string', 'max:65535'],
-            'category_id' => ['required', 'string', 'exists:categories,id'],
+            'categoryId' => ['required', 'string', 'exists:categories,id'],
         ];
     }
 
@@ -26,7 +26,7 @@ trait WithPostCommonRules
         return [
             'title' => PostUtility::trans('post.attributes.title'),
             'content' => PostUtility::trans('post.attributes.content'),
-            'category_id' => PostUtility::trans('post.attributes.category_id'),
+            'categoryId' => PostUtility::trans('post.attributes.category_id'),
         ];
     }
 }

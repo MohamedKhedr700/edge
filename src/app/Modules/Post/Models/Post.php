@@ -2,7 +2,10 @@
 
 namespace Modules\Post\Models;
 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Modules\Category\Models\Category;
 use Modules\Post\Models\ModelFilter\PostFilter;
+use Modules\User\Models\User;
 use Raid\Core\Model\Models\Model;
 
 class Post extends Model
@@ -41,5 +44,21 @@ class Post extends Model
         static::addGlobalScope('created_by', function ($query) {
             $query->where('created_by', account()->accountId());
         });
+    }
+
+    /**
+     * Get the author that owns the post.
+     */
+    public function author(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'created_by');
+    }
+
+    /**
+     * Get the category that owns the post.
+     */
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(Category::class);
     }
 }

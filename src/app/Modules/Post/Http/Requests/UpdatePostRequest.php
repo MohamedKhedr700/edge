@@ -14,6 +14,10 @@ class UpdatePostRequest extends FormRequest
      */
     public function rules(): array
     {
-        return $this->withCommonRules();
+        return $this->withCommonRules([
+            'title' => ['sometimes'],
+            'content' => ['sometimes'],
+            'categoryId' => ['sometimes'],
+        ]);
     }
 }
