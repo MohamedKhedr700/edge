@@ -4,9 +4,12 @@ namespace Modules\Post\Listeners;
 
 use Modules\Post\Models\Post;
 use Raid\Core\Event\Events\Contracts\EventListenerInterface;
+use Raid\Core\Event\Traits\Event\Queueable;
 
 class AssociatePostProducts implements EventListenerInterface
 {
+    use Queueable;
+
     /**
      * Handle the event listener.
      */
