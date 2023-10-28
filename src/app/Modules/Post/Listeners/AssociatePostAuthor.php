@@ -12,6 +12,12 @@ class AssociatePostAuthor implements EventListenerInterface
      */
     public function handle(Post $post): void
     {
-        //        $post->author()->associate($post->attribute('category_id'));
+        $author = $post->author;
+
+        if (! $author) {
+            return;
+        }
+
+        $post->forceFillAttribute('authorAssociated', $author->toAssociatePost());
     }
 }

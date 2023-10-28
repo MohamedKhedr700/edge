@@ -14,6 +14,10 @@ class AssociatePostProducts implements EventListenerInterface
     {
         $products = $post->products;
 
+        if (! $products) {
+            return;
+        }
+
         $productsAssociated = [];
 
         foreach ($products as $product) {

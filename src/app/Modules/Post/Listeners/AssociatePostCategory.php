@@ -14,6 +14,10 @@ class AssociatePostCategory implements EventListenerInterface
     {
         $category = $post->category;
 
+        if (! $category) {
+            return;
+        }
+
         $post->forceFillAttribute('categoryAssociated', $category->toAssociatePost());
     }
 }

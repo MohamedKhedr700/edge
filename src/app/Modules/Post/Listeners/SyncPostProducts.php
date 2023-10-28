@@ -10,12 +10,12 @@ class SyncPostProducts implements EventListenerInterface
     /**
      * The product ids.
      */
-    private array $productIds = [];
+    private array $productIds;
 
     /**
-     * {@inheritdoc}
+     * Initialize the event listener.
      */
-    public function init(array $data)
+    public function init(array $data): void
     {
         if (! array_key_exists('productIds', $data)) {
             return;
@@ -29,6 +29,10 @@ class SyncPostProducts implements EventListenerInterface
      */
     public function handle(Post $post): void
     {
+        if (! isset($this->productIds)) {
+            return;
+        }
+
         $post->products()->sync($this->productIds);
     }
 }
