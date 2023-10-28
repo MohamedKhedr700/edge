@@ -12,8 +12,8 @@ class EmbedPostCategory implements EventListenerInterface
      */
     public function handle(Post $post): void
     {
-        dd($post);
+        $category = $post->category;
 
-        //        $post->category()->associate($post->attribute('category_id'));
+        $post->forceFillAttribute('categoryEmbedded', $category->toPostEmbedded());
     }
 }

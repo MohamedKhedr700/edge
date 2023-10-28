@@ -18,4 +18,12 @@ class Category extends Model
     protected $fillable = [
         'name', 'description',
     ];
+
+    /**
+     *  Define shared data to be embedded to a post.
+     */
+    public function toPostEmbedded(): array
+    {
+        return $this->attributes('id', 'name', 'description');
+    }
 }
