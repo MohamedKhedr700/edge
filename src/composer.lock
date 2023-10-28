@@ -3899,12 +3899,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MohamedKhedr700/core-model.git",
-                "reference": "bbb4b4bddbb0bff551a02258cb27d17ce92c0c6f"
+                "reference": "5a53e4bd00b62c369f286ff7fd89267e14c141f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MohamedKhedr700/core-model/zipball/bbb4b4bddbb0bff551a02258cb27d17ce92c0c6f",
-                "reference": "bbb4b4bddbb0bff551a02258cb27d17ce92c0c6f",
+                "url": "https://api.github.com/repos/MohamedKhedr700/core-model/zipball/5a53e4bd00b62c369f286ff7fd89267e14c141f3",
+                "reference": "5a53e4bd00b62c369f286ff7fd89267e14c141f3",
                 "shasum": ""
             },
             "require": {
@@ -3950,7 +3950,7 @@
                 "issues": "https://github.com/MohamedKhedr700/core-model/issues",
                 "source": "https://github.com/MohamedKhedr700/core-model/tree/main"
             },
-            "time": "2023-10-19T22:03:05+00:00"
+            "time": "2023-10-28T00:24:37+00:00"
         },
         {
             "name": "raid/core-modules",
@@ -9744,7 +9744,6 @@
         "raid/core-controller": 20,
         "raid/core-event": 20,
         "raid/core-gate": 20,
-        "raid/core-model": 20,
         "raid/core-modules": 20,
         "raid/core-repository": 20,
         "raid/core-request": 20

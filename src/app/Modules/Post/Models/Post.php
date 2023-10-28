@@ -2,8 +2,10 @@
 
 namespace Modules\Post\Models;
 
+use App\Modules\Post\Models\PostProduct;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Modules\Category\Models\Category;
 use Modules\Post\Models\ModelFilter\PostFilter;
 use Modules\Product\Models\Product;
@@ -21,7 +23,7 @@ class Post extends Model
      * {@inheritdoc}
      */
     protected $fillable = [
-        'title', 'content', 'category_id', 'product_ids',
+        'title', 'content', 'category_id',
     ];
 
     /**
@@ -69,6 +71,9 @@ class Post extends Model
      */
     public function products(): BelongsToMany
     {
-        return $this->belongsToMany(Product::class, 'post_product', 'post_id', 'product_id');
+        return $this->belongsToMany(Product::class, null, 'post_ids', 'product_ids')
+            ->using(PostProduct::class)
+            ->withPivot('id')
+            ->withTimestamps();
     }
 }

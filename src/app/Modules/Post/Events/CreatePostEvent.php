@@ -2,9 +2,10 @@
 
 namespace Modules\Post\Events;
 
-use Modules\Post\Listeners\EmbedPostAuthor;
-use Modules\Post\Listeners\EmbedPostCategory;
-use Modules\Post\Listeners\EmbedPostProducts;
+use App\Modules\Post\Listeners\SyncPostProducts;
+use Modules\Post\Listeners\AssociatePostAuthor;
+use Modules\Post\Listeners\AssociatePostCategory;
+use Modules\Post\Listeners\AssociatePostProducts;
 use Raid\Core\Enum\Enums\Action;
 use Raid\Core\Event\Events\Contracts\EventInterface;
 use Raid\Core\Event\Events\Event;
@@ -20,8 +21,9 @@ class CreatePostEvent extends Event implements EventInterface
      * {@inheritdoc}
      */
     public const LISTENERS = [
-        EmbedPostAuthor::class,
-        EmbedPostCategory::class,
-        EmbedPostProducts::class,
+        AssociatePostAuthor::class,
+        AssociatePostCategory::class,
+        SyncPostProducts::class,
+        AssociatePostProducts::class,
     ];
 }

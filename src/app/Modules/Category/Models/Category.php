@@ -22,7 +22,7 @@ class Category extends Model
     /**
      *  Define shared data to be embedded to a post.
      */
-    public function toPostEmbedded(): array
+    public function toAssociatePost(): array
     {
         return $this->attributes('id', 'name', 'description');
     }

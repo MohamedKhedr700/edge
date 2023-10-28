@@ -28,4 +28,12 @@ class Product extends Model
         'price' => FloatCast::class,
         'quantity' => IntegerCast::class,
     ];
+
+    /**
+     * Define shared data to be embedded to a post.
+     */
+    public function toAssociatePost(): array
+    {
+        return $this->attributes('id', 'name', 'price');
+    }
 }

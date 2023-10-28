@@ -5,7 +5,7 @@ namespace Modules\Post\Listeners;
 use Modules\Post\Models\Post;
 use Raid\Core\Event\Events\Contracts\EventListenerInterface;
 
-class EmbedPostAuthor implements EventListenerInterface
+class AssociatePostAuthor implements EventListenerInterface
 {
     /**
      * Handle the event listener.
