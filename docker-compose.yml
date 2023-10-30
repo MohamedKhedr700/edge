@@ -41,3 +41,14 @@ services:
       - ./docker/mongodb/db:/data/db
     networks:
       - local
+
+  supervisor:
+    container_name: supervisor
+    build:
+      context: .
+      dockerfile: supervisor.dockerfile
+    volumes:
+      - ./src:/var/www/html
+      - ./docker/worker/queue.sh:/var/www/html/queue.sh
+    networks:
+      - local
