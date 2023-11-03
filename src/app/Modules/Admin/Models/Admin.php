@@ -11,6 +11,11 @@ class Admin extends Account implements AccountInterface
     /**
      * {@inheritdoc}
      */
+    public const ACCOUNT_TYPE = 'admin';
+
+    /**
+     * {@inheritdoc}
+     */
     protected string $filter = AdminFilter::class;
 
     /**
