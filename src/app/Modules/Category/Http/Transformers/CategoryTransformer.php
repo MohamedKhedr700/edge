@@ -12,6 +12,11 @@ class CategoryTransformer extends Transformer
      */
     public function transform(Category $category): array
     {
-        return [];
+        return [
+            'id' => $category->attribute('id'),
+            'name' => $category->attribute('name'),
+            'description' => $category->attribute('description'),
+            'createdAt' => $category->getAttribute('created_at')->toIsoString(),
+        ];
     }
 }

@@ -1,11 +1,8 @@
 version: '3.9'
 
-networks:
-  local:
-
 services:
   php:
-    container_name: php
+    container_name: php_app
     build:
       context: .
       dockerfile: Dockerfile
@@ -15,12 +12,12 @@ services:
       - ./src:/var/www/html
       - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
     depends_on:
-      - mongodb
+      - mysql
     networks:
       - local
 
   nginx:
-    container_name: nginx
+    container_name: nginx_app
     image: nginx:stable-alpine
     ports:
       - "8088:80"
@@ -33,22 +30,58 @@ services:
       - local
 
   mongodb:
-    container_name: mongodb
+    container_name: mongodb_app
     image: mongo:latest
     ports:
       - "27017:27017"
     volumes:
-      - ./docker/mongodb/db:/data/db
+      - mongodb_data:/data/db
     networks:
       - local
 
-  supervisor:
-    container_name: supervisor
-    build:
-      context: .
-      dockerfile: supervisor.dockerfile
+  mysql:
+    container_name: mysql_app
+    image: mysql:5.7.33
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: edge
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: root
+      MYSQL_USER: phpmyadmin
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
     volumes:
-      - ./src:/var/www/html
-      - ./docker/worker/queue.sh:/var/www/html/queue.sh
+      - mysql_data:/var/lib/mysql
     networks:
       - local
+
+  phpmyadmin:
+    image: phpmyadmin:5.1.0-apache
+    container_name: phpmyadmin
+    restart: unless-stopped
+    ports:
+      - "8200:80"
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      PMA_USER: phpmyadmin
+      PMA_PASSWORD: root
+    networks:
+      - local
+
+volumes:
+  mysql_data:
+    driver: "local"
+  phpmyadmin_data:
+    driver: "local"
+  mariadb_data:
+    driver: "local"
+  mongodb_data:
+    driver: "local"
+
+networks:
+  local:
+    driver: bridge

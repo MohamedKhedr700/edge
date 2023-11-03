@@ -15,7 +15,7 @@ use Modules\Category\Http\Controllers\Dashboard\CategoryController;
 */
 
 Route::prefix('v1/dashboard/categories')
-    ->middleware(['auth:admin'])
+//    ->middleware(['auth:admin'])
     ->group(function () {
         // store category
         Route::post('/', [CategoryController::class, 'store']);

@@ -48,7 +48,7 @@ return [
     */
 
     'gates' => [
-        \Modules\Category\Http\Gates\CategoryGate::class,
+//        \Modules\Category\Http\Gates\CategoryGate::class,
     ],
 
     /*

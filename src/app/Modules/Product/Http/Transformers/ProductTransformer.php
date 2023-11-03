@@ -18,7 +18,7 @@ class ProductTransformer extends Transformer
             'description' => $product->attribute('description'),
             'price' => $product->attribute('price'),
             'quantity' => $product->attribute('quantity'),
-            'created_at' => $product->getAttribute('created_at')->toIsoString(),
+            'createdAt' => $product->getAttribute('created_at')->toIsoString(),
         ];
     }
 }

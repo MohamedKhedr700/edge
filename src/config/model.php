@@ -11,16 +11,5 @@ return [
     |
     */
 
-    'model_manager' => \Raid\Core\Model\Models\Model::class,
-
-    /*
-    |--------------------------------------------------------------------------
-    | Base Model
-    |--------------------------------------------------------------------------
-    |
-    | This option allows you to specify the base model for model_manager.
-    |
-    */
-
-    'base_model' => \MongoDB\Laravel\Eloquent\Model::class,
+    'model_manager' => \Raid\Core\Model\Models\MysqlModel::class,
 ];

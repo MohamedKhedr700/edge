@@ -17,7 +17,7 @@ class AdminTransformer extends Transformer
             'name' => $admin->attribute('name'),
             'email' => $admin->attribute('email'),
             'phone' => $admin->attribute('phone'),
-            'created_at' => $admin->getAttribute('created_at')->toIsoString(),
+            'createdAt' => $admin->getAttribute('created_at')->toIsoString(),
         ];
     }
 }
