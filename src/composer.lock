@@ -3554,12 +3554,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MohamedKhedr700/core-auth.git",
-                "reference": "e76d3c018442c7e6296a0f1be30e776738892883"
+                "reference": "db4f0068385d51e7d10578d3adeb099314095292"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MohamedKhedr700/core-auth/zipball/e76d3c018442c7e6296a0f1be30e776738892883",
-                "reference": "e76d3c018442c7e6296a0f1be30e776738892883",
+                "url": "https://api.github.com/repos/MohamedKhedr700/core-auth/zipball/db4f0068385d51e7d10578d3adeb099314095292",
+                "reference": "db4f0068385d51e7d10578d3adeb099314095292",
                 "shasum": ""
             },
             "require": {
@@ -3607,7 +3607,7 @@
                 "issues": "https://github.com/MohamedKhedr700/core-auth/issues",
                 "source": "https://github.com/MohamedKhedr700/core-auth/tree/main"
             },
-            "time": "2023-11-02T22:50:08+00:00"
+            "time": "2023-11-03T00:33:10+00:00"
         },
         {
             "name": "raid/core-command",
@@ -9740,10 +9740,10 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "raid/core-action": 20,
-        "raid/core-auth": 20,
         "raid/core-controller": 20,
         "raid/core-event": 20,
         "raid/core-gate": 20,
+        "raid/core-model": 20,
         "raid/core-modules": 20,
         "raid/core-repository": 20,
         "raid/core-request": 20
