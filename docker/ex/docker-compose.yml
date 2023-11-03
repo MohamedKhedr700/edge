@@ -1,0 +1,48 @@
+version: '3.9'
+
+services:
+  php:
+    container_name: php_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./src:/var/www/html
+      - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    depends_on:
+      - mongodb
+    networks:
+      - local
+
+  nginx:
+    container_name: nginx_app
+    image: nginx:stable-alpine
+    ports:
+      - "8088:80"
+    volumes:
+      - ./src:/var/www/html
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
+    networks:
+      - local
+
+  mongodb:
+    container_name: mongodb_app
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - db_data:/data/db
+    networks:
+      - local
+
+volumes:
+  db_data:
+    driver: "local"
+
+networks:
+  local:
+    driver: bridge
